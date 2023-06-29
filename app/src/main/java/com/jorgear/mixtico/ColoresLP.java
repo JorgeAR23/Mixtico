@@ -14,7 +14,7 @@ public class ColoresLP extends AppCompatActivity {
         setContentView(R.layout.activity_colores_lp);
     }
 
-    //Metodo para regresar a Inicio
+    //Metodo para regresar a Inicio//
     public void Inicio(View view){
         Intent inicio = new Intent(this, MainActivity.class);
         startActivity(inicio);
