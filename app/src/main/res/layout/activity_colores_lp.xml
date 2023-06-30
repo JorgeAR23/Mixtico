@@ -13,20 +13,6 @@
         android:layout_height="match_parent"
         tools:context=".ColoresLP">
 
-        <ImageButton
-            android:id="@+id/imageButton17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="41dp"
-            android:background="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton12"
-            app:srcCompat="@mipmap/cafe" />
-
         <TextView
             android:id="@+id/textTitulo2"
             android:layout_width="wrap_content"
@@ -48,25 +34,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="24dp"
-            android:background="#FFFFFF"
+            android:background="@color/white"
             android:contentDescription="Boton Regresar"
             android:onClick="Inicio"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrowback" />
-
-        <ImageButton
-            android:id="@+id/imageButton12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="41dp"
-            android:background="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton13"
-            app:srcCompat="@mipmap/verde" />
 
         <ImageButton
             android:id="@+id/imageButton13"
@@ -75,7 +48,8 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="41dp"
-            android:background="#FFFFFF"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toStartOf="@+id/imageButton14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo2"
@@ -87,10 +61,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="25dp"
-            android:background="#FFFFFF"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo2"
             app:srcCompat="@mipmap/azul" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton13"
+            app:srcCompat="@mipmap/verde" />
 
         <ImageButton
             android:id="@+id/imageButton15"
@@ -98,10 +87,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="25dp"
-            android:background="#FFFFFF"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton14"
             app:srcCompat="@mipmap/amarillo" />
+
+        <ImageButton
+            android:id="@+id/imageButton17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton12"
+            app:srcCompat="@mipmap/cafe" />
 
         <ImageButton
             android:id="@+id/imageButton16"
@@ -109,10 +113,37 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="25dp"
-            android:background="#FFFFFF"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton15"
             app:srcCompat="@mipmap/anaranjado" />
+
+        <ImageButton
+            android:id="@+id/imageButton20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton17"
+            app:srcCompat="@mipmap/negro" />
+
+        <ImageButton
+            android:id="@+id/imageButton21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/white"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton16"
+            app:srcCompat="@mipmap/blanco" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -1,6 +1,6 @@
 <resources>
     <!--Para inicio-->
-    <string name="app_name">-------- Mixtico: Aprende Mixteco -------</string>
+    <string name="app_name">Mixtico</string>
     <string name="textTitulo">INICIO</string>
     <string name="descripciones">Info</string>
     <string name="textViewAciertos">0/5 Aciertos</string>
