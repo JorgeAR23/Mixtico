@@ -8,29 +8,29 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 //comment
-public class MainActivity extends AppCompatActivity {
+public class Info extends AppCompatActivity {
 
     public BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_info);
 
         // Obtione la referencia al BottomNavigationView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.placeholder);
+        bottomNavigationView.setSelectedItemId(R.id.info);
 
         // Agrega el listener para manejar los eventos de clic en los elementos del menú
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            // Obtiene el ID del elemento seleccionado
+            // Obtener el ID del elemento seleccionado
             int itemId = item.getItemId();
 
             // Realiza acciones según el elemento seleccionado
             switch (itemId) {
-                case R.id.info:
+                case R.id.placeholder:
                     //Metodo para ir a Info
-                    Intent info = new Intent(this, Info.class);
+                    Intent info = new Intent(this, MainActivity.class);
                     startActivity(info);
                     break;
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // Acción para salir de la aplicación
-                finish();
+                finishAffinity();
             }
         });
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 // Acción para cancelar la salida
                 dialog.dismiss();
-                bottomNavigationView.setSelectedItemId(R.id.placeholder);
+                bottomNavigationView.setSelectedItemId(R.id.info);
             }
         });
 
@@ -72,24 +72,10 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-
-    //Metodo para ir a AnimalesLP
-    public void Animales(View view){
-        Intent animales = new Intent(this, AnimalesLP.class);
-        startActivity(animales);
+    //Metodo para ir a Inicio
+    public void Inicio(View view){
+        Intent inicio = new Intent(this, MainActivity.class);
+        startActivity(inicio);
     }
-
-    //Metodo para ir a ColoresLP
-    public void Colores(View view){
-        Intent colores = new Intent(this, ColoresLP.class);
-        startActivity(colores);
-    }
-
-    //Metodo para ir a PronombresLP
-    public void Pronombres(View view){
-        Intent pronombres = new Intent(this, PronombresLP.class);
-        startActivity(pronombres);
-    }
-
 
 }

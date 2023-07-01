@@ -4,7 +4,8 @@
     <item
         android:id="@+id/info"
         android:icon="@drawable/info"
-        android:title="Info"/>
+        android:title="Info"
+        />
 
     <item
         android:id="@+id/placeholder"
