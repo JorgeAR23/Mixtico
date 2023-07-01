@@ -230,7 +230,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/fab"
         android:src="@drawable/home"
-        android:contentDescription="hi"
+        android:contentDescription="botoninicio"
         app:layout_anchor="@id/bottomAppBar"
         />
 

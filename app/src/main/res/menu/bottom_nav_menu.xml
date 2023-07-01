@@ -13,6 +13,6 @@
     <item
         android:id="@+id/exitapp"
         android:icon="@drawable/exitapp"
-        android:title="Exit"/>
+        android:title="Salir"/>
 
 </menu>
