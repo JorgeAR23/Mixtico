@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // Acción para salir de la aplicación
-                finish();
+                finishAffinity();
             }
         });
 
