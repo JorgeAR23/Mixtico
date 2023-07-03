@@ -1,21 +1,33 @@
 package com.jorgear.mixtico;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 //comment
 public class MainActivity extends AppCompatActivity {
 
+    TextView tvColores;
     public BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tvColores = findViewById(R.id.textViewColores);
+        SharedPreferences sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        String aciertoColor = sharedPreferences.getString("aciertoColor", "");
+        tvColores.setText(aciertoColor);
+
+
 
         // Obtione la referencia al BottomNavigationView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -45,32 +57,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     //Metodo para Salir
     private void mostrarDialogoDeConfirmacion() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Confirmar salida");
         builder.setMessage("¿Estás seguro de que deseas salir de la aplicación?");
 
-        builder.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Acción para salir de la aplicación
-                finishAffinity();
-            }
+        builder.setPositiveButton("Salir", (dialog, which) -> {
+            // Acción para salir de la aplicación
+            finishAffinity();
         });
 
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Acción para cancelar la salida
-                dialog.dismiss();
-                bottomNavigationView.setSelectedItemId(R.id.placeholder);
-            }
+        builder.setNegativeButton("Cancelar", (dialog, which) -> {
+            // Acción para cancelar la salida
+            dialog.dismiss();
+            bottomNavigationView.setSelectedItemId(R.id.placeholder);
         });
 
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+
 
 
     //Metodo para ir a AnimalesLP

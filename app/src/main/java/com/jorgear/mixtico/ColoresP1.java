@@ -1,14 +1,15 @@
 package com.jorgear.mixtico;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -21,6 +22,10 @@ public class ColoresP1 extends AppCompatActivity {
     ImageView correctoimg, incorrectoimg;
     TextView correctotxt, incorrectotxt;
     Button button1;
+    MediaPlayer sonidoC, sonidoI;
+    SharedPreferences sharedPreferences;
+
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +42,12 @@ public class ColoresP1 extends AppCompatActivity {
         correctotxt = findViewById(R.id.respuestaCorrecta);
         incorrectotxt = findViewById(R.id.respuestaIncorrecta);
         button1 = findViewById(R.id.button);
-
+        EditText editText = findViewById(R.id.editTextMultiLine);
+        editText.setKeyListener(null);
+        sonidoC = MediaPlayer.create(this, R.raw.sonido_correcto);
+        sonidoI = MediaPlayer.create(this, R.raw.sonido_incorrecto);
+        sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
     }
 
 
@@ -50,15 +60,16 @@ public class ColoresP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            button1.setText("SIGUIENTE");
+            sonidoC.start();
             button1.setBackgroundColor(getResources().getColor(R.color.green));
             button1.setEnabled(false);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    p2(); // Llama al método para ir a la siguiente actividad después del retraso
-                }
-            }, 2000);
+
+            //Manda el dato al MainActivity
+            editor.putString("aciertoColor", "1/5 aciertos");
+            editor.apply();
+
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::p2, 2000);
 
         }
         else if(rb2.isChecked()) {
@@ -67,15 +78,11 @@ public class ColoresP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            button1.setText("SIGUIENTE");
+            sonidoI.start();
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    p2(); // Llama al método para ir a la siguiente actividad después del retraso
-                }
-            }, 2000);
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::p2, 2000);
 
         }
         else if(rb3.isChecked()) {
@@ -84,15 +91,11 @@ public class ColoresP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            button1.setText("SIGUIENTE");
+            sonidoI.start();
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    p2(); // Llama al método para ir a la siguiente actividad después del retraso
-                }
-            }, 2000);
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::p2, 2000);
 
         }
         else if(rb4.isChecked()) {
@@ -101,15 +104,11 @@ public class ColoresP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            button1.setText("SIGUIENTE");
+            sonidoI.start();
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    p2(); // Llama al método para ir a la siguiente actividad después del retraso
-                }
-            }, 2000);
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::p2, 2000);
 
         }
     }
@@ -121,43 +120,54 @@ public class ColoresP1 extends AppCompatActivity {
         builder.setTitle("Confirmar salida");
         builder.setMessage("¿Estás seguro de que deseas salir de la prueba?");
 
-        builder.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Acción para salir de la aplicación
-                Salir();
-            }
+        builder.setPositiveButton("Salir", (dialog, which) -> {
+            // Acción para salir de la aplicación
+            Salir();
         });
 
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Acción para cancelar la salida
-                dialog.dismiss();
-            }
+        builder.setNegativeButton("Cancelar", (dialog, which) -> {
+            // Acción para cancelar la salida
+            dialog.dismiss();
         });
 
         AlertDialog dialog = builder.create();
         dialog.show();
     }
 
-    //Metodo para salir a Inicio
-    public void Salir() {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
-        finish();
-    }
-
-
-    //Metodo para boton regresar a Inicio
-    public void SalirBoton(View view){
-        mostrarDialogoDeConfirmacion();
-    }
-
     //Metodo para ir a la siguiente pregunta
     public void p2(){
         Intent p2 = new Intent(this, ColoresP2.class);
         startActivity(p2);
+    }
+
+    //Metodo para salir a Inicio
+    public void Salir() {
+        Intent salir = new Intent(this, MainActivity.class);
+        startActivity(salir);
+    }
+
+
+    //Metodo para el boton regresar a Inicio
+    public void SalirBoton(View view){
+        mostrarDialogoDeConfirmacion();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (sonidoC != null) {
+            sonidoC.release();
+            sonidoC = null;
+        } else if (sonidoI != null) {
+            sonidoI.release();
+            sonidoI = null;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Aquí puedes realizar la acción que desees cuando se presione el botón de regresar
+        mostrarDialogoDeConfirmacion();
+        // Si no quieres hacer nada, puedes dejar este método vacío
     }
 }

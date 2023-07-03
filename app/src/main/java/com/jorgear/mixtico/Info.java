@@ -1,7 +1,6 @@
 package com.jorgear.mixtico;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -51,21 +50,15 @@ public class Info extends AppCompatActivity {
         builder.setTitle("Confirmar salida");
         builder.setMessage("¿Estás seguro de que deseas salir de la aplicación?");
 
-        builder.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Acción para salir de la aplicación
-                finishAffinity();
-            }
+        builder.setPositiveButton("Salir", (dialog, which) -> {
+            // Acción para salir de la aplicación
+            finishAffinity();
         });
 
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Acción para cancelar la salida
-                dialog.dismiss();
-                bottomNavigationView.setSelectedItemId(R.id.info);
-            }
+        builder.setNegativeButton("Cancelar", (dialog, which) -> {
+            // Acción para cancelar la salida
+            dialog.dismiss();
+            bottomNavigationView.setSelectedItemId(R.id.info);
         });
 
         AlertDialog dialog = builder.create();

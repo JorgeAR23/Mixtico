@@ -1,5 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="25dp" />
-    <solid android:color="#FFFFFF" /> <!-- Color de fondo del botón -->
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="25dp" />
+            <solid android:color="#CCCCCC" /> <!-- Color de fondo temporal cuando se presiona -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="25dp" />
+            <solid android:color="#FFFFFF" /> <!-- Color de fondo normal -->
+        </shape>
+    </item>
+</selector>

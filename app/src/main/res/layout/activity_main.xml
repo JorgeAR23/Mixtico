@@ -27,6 +27,7 @@
                 android:layout_marginEnd="134dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/textTitulo"
+                android:textAlignment="center"
                 android:textSize="48sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toStartOf="@+id/textViewColores"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +71,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toStartOf="@+id/textViewSemana"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +86,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -96,10 +100,11 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toStartOf="@+id/textView6"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+                app:layout_constraintTop_toBottomOf="@+id/regresarButton" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -110,6 +115,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
@@ -169,7 +175,7 @@
                 app:srcCompat="@mipmap/semana" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/regresarButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
