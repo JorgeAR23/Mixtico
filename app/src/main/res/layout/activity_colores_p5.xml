@@ -42,8 +42,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="144dp"
         android:fontFamily="sans-serif-black"
-        android:text="PREGUNTA 1"
-        android:gravity="center"
+        android:text="PREGUNTA 5"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +60,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿Como se le nombra al color rojo en mixteco?"
+        android:text="¿Como se le nombra al color amarillo en mixteco?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +86,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Kuá'a"
+            android:text="Kali"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -99,7 +98,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Kii"
+            android:text="Linux"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -111,7 +110,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Laoe"
+            android:text="Olah"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -122,7 +121,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Kuni"
+            android:text="Kase"
             android:textAlignment="center"
             android:textSize="20sp" />
     </RadioGroup>

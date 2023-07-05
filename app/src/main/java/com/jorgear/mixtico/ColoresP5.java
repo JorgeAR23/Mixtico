@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class ColoresP3 extends AppCompatActivity {
+public class ColoresP5 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
@@ -30,7 +30,7 @@ public class ColoresP3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colores_p3);
+        setContentView(R.layout.activity_colores_p5);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
@@ -65,11 +65,11 @@ public class ColoresP3 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoColor3", 1);
+            editor.putInt("aciertoColor5", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p4, 2000);
+            new Handler().postDelayed(this::Salir, 2000);
 
         }
         else if(rb2.isChecked()) {
@@ -82,7 +82,7 @@ public class ColoresP3 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p4, 2000);
+            new Handler().postDelayed(this::Salir, 2000);
 
         }
         else if(rb3.isChecked()) {
@@ -95,7 +95,7 @@ public class ColoresP3 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p4, 2000);
+            new Handler().postDelayed(this::Salir, 2000);
 
         }
         else if(rb4.isChecked()) {
@@ -108,7 +108,7 @@ public class ColoresP3 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p4, 2000);
+            new Handler().postDelayed(this::Salir, 2000);
 
         }
     }
@@ -135,9 +135,9 @@ public class ColoresP3 extends AppCompatActivity {
     }
 
     //Metodo para ir a la siguiente pregunta
-    public void p4(){
-        Intent p4 = new Intent(this, ColoresP4.class);
-        startActivity(p4);
+    public void p5(){
+        Intent p5 = new Intent(this, ColoresP5.class);
+        startActivity(p5);
     }
 
     //Metodo para salir a Inicio

@@ -1,6 +1,8 @@
 package com.jorgear.mixtico;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public BottomNavigationView bottomNavigationView;
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
         tvColores = findViewById(R.id.textViewColores);
         SharedPreferences sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
-        String aciertoColor = sharedPreferences.getString("aciertoColor", "");
-        tvColores.setText(aciertoColor);
+        int aciertoColor1 = sharedPreferences.getInt("aciertoColor1", 0);
+        int aciertoColor2 = sharedPreferences.getInt("aciertoColor2", 0);
+        int aciertoColor3 = sharedPreferences.getInt("aciertoColor3", 0);
+        int aciertoColor4 = sharedPreferences.getInt("aciertoColor4", 0);
+        int aciertoColor5 = sharedPreferences.getInt("aciertoColor5", 0);
+        int aciertosColor = aciertoColor1 + aciertoColor2 + aciertoColor3 + aciertoColor4 + aciertoColor5;
+        String aciertosColorString = String.valueOf(aciertosColor);
+        tvColores.setText(aciertosColorString + "/5 aciertos");
 
 
 
@@ -66,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setPositiveButton("Salir", (dialog, which) -> {
             // Acción para salir de la aplicación
-            finishAffinity();
+            finishAndRemoveTask();
         });
 
         builder.setNegativeButton("Cancelar", (dialog, which) -> {
@@ -101,4 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onBackPressed() {
+        finishAffinity();
+    }
 }

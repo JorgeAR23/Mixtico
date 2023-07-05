@@ -54,8 +54,8 @@ public class ColoresP2 extends AppCompatActivity {
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
         if(rb1.isChecked()) {
-            correctoimg.setVisibility(view.VISIBLE);
-            correctotxt.setVisibility(view.VISIBLE);
+            correctoimg.setVisibility(View.VISIBLE);
+            correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
@@ -65,7 +65,7 @@ public class ColoresP2 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putString("aciertoColor", "2/5 aciertos");
+            editor.putInt("aciertoColor2", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
@@ -73,8 +73,8 @@ public class ColoresP2 extends AppCompatActivity {
 
         }
         else if(rb2.isChecked()) {
-            incorrectoimg.setVisibility(view.VISIBLE);
-            incorrectotxt.setVisibility(view.VISIBLE);
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
@@ -86,8 +86,8 @@ public class ColoresP2 extends AppCompatActivity {
 
         }
         else if(rb3.isChecked()) {
-            incorrectoimg.setVisibility(view.VISIBLE);
-            incorrectotxt.setVisibility(view.VISIBLE);
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
@@ -99,8 +99,8 @@ public class ColoresP2 extends AppCompatActivity {
 
         }
         else if(rb4.isChecked()) {
-            incorrectoimg.setVisibility(view.VISIBLE);
-            incorrectotxt.setVisibility(view.VISIBLE);
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
@@ -163,11 +163,9 @@ public class ColoresP2 extends AppCompatActivity {
             sonidoI = null;
         }
     }
-
+    //Metodo para elegir que hace el boton de Regresar, si esta vacio lo desactiva
     @Override
     public void onBackPressed() {
-        // Aquí puedes realizar la acción que desees cuando se presione el botón de regresar
         mostrarDialogoDeConfirmacion();
-        // Si no quieres hacer nada, puedes dejar este método vacío
     }
 }
