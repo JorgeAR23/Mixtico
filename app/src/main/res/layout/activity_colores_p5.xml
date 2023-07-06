@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿Que color se esta pronunciando en el siguiente audio?"
+        android:text="¿Que palabra se esta pronunciando en el siguiente audio?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -12,8 +12,8 @@
         android:title=""/>
 
     <item
-        android:id="@+id/exitapp"
-        android:icon="@drawable/exitapp"
-        android:title="Salir"/>
+        android:id="@+id/creditos"
+        android:icon="@drawable/people"
+        android:title="Creditos"/>
 
 </menu>

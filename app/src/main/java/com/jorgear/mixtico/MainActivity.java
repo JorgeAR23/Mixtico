@@ -63,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(info);
                     break;
 
-                case R.id.exitapp:
+                case R.id.creditos:
                     // Metodo para Salir
-                    mostrarDialogoDeConfirmacion();
+                    Intent creditos = new Intent(this, Creditos.class);
+                    startActivity(creditos);
                     break;
             }
 
@@ -74,27 +75,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    //Metodo para Salir
-    private void mostrarDialogoDeConfirmacion() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirmar salida");
-        builder.setMessage("¿Estás seguro de que deseas salir de la aplicación?");
-
-        builder.setPositiveButton("Salir", (dialog, which) -> {
-            // Acción para salir de la aplicación
-            finishAndRemoveTask();
-        });
-
-        builder.setNegativeButton("Cancelar", (dialog, which) -> {
-            // Acción para cancelar la salida
-            dialog.dismiss();
-            bottomNavigationView.setSelectedItemId(R.id.placeholder);
-        });
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
 
     //Metodo para ir a AnimalesLP
     public void Animales(View view){

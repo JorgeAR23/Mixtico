@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:backgroundTintMode="src_in">
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
+            android:backgroundTint="#C32222"
             tools:context=".MainActivity">
 
             <ImageButton
@@ -66,8 +67,8 @@
                 android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
-                android:textSize="20sp"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/textViewColores"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -81,8 +82,8 @@
                 android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
-                android:textSize="20sp"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -95,8 +96,8 @@
                 android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
-                android:textSize="20sp"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/textViewSemana"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -110,8 +111,8 @@
                 android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
-                android:textSize="20sp"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -124,8 +125,8 @@
                 android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
-                android:textSize="20sp"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/textView6"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,8 +140,8 @@
                 android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
-                android:textSize="20sp"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
@@ -150,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="34dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
                 android:onClick="Animales"
@@ -157,7 +159,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-                app:srcCompat="@mipmap/animales" />
+                app:srcCompat="@drawable/animales" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -170,7 +172,7 @@
                 android:onClick="Colores"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-                app:srcCompat="@mipmap/colores3" />
+                app:srcCompat="@drawable/colores" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
@@ -185,7 +187,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewAnimales"
-                app:srcCompat="@mipmap/pronombres" />
+                app:srcCompat="@drawable/pronombres" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -197,7 +199,7 @@
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewColores"
-                app:srcCompat="@mipmap/semana" />
+                app:srcCompat="@drawable/semana" />
 
             <ImageButton
                 android:id="@+id/regresarButton"
@@ -212,7 +214,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewPronombres"
-                app:srcCompat="@mipmap/emociones" />
+                app:srcCompat="@drawable/emociones" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
@@ -224,30 +226,28 @@
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSemana"
-                app:srcCompat="@mipmap/saludos" />
-
+                app:srcCompat="@drawable/saludos" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:id="@+id/bottomAppBar"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="10dp"
-        >
+        app:fabCradleVerticalOffset="10dp">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bottomNavigationView"
             android:layout_marginEnd="16dp"
-            app:menu="@menu/bottom_nav_menu"
             android:background="@drawable/transparent_background"
-            />
+            app:menu="@menu/bottom_nav_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

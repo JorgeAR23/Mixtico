@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿Como se le nombra al color rojo en mixteco?"
+        android:text="¿Como se escribe rojo en mixteco?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

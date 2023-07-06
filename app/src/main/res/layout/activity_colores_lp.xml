@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:contentDescription="@string/botonRegresar">
+    android:contentDescription="@string/descripciones">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo2"
-            app:srcCompat="@mipmap/rojo" />
+            app:srcCompat="@drawable/rojo" />
 
         <ImageButton
             android:id="@+id/imageButtonAzul"
@@ -94,7 +94,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo2"
-            app:srcCompat="@mipmap/azul" />
+            app:srcCompat="@drawable/azul" />
 
         <ImageButton
             android:id="@+id/imageButton12"
@@ -109,7 +109,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonRojo"
-            app:srcCompat="@mipmap/verde" />
+            app:srcCompat="@drawable/verde" />
 
         <ImageButton
             android:id="@+id/imageButton15"
@@ -121,7 +121,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonAzul"
-            app:srcCompat="@mipmap/amarillo" />
+            app:srcCompat="@drawable/amarillo" />
 
         <ImageButton
             android:id="@+id/imageButton17"
@@ -136,7 +136,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/imageButton12"
-            app:srcCompat="@mipmap/cafe" />
+            app:srcCompat="@drawable/cafe" />
 
         <ImageButton
             android:id="@+id/imageButton16"
@@ -148,7 +148,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton15"
-            app:srcCompat="@mipmap/anaranjado" />
+            app:srcCompat="@drawable/anaranjado" />
 
         <ImageButton
             android:id="@+id/imageButton20"
@@ -163,7 +163,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton17"
-            app:srcCompat="@mipmap/negro" />
+            app:srcCompat="@drawable/negro" />
 
         <ImageButton
             android:id="@+id/imageButton21"
@@ -175,7 +175,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton16"
-            app:srcCompat="@mipmap/blanco" />
+            app:srcCompat="@drawable/blanco" />
 
         <TextView
             android:id="@+id/textViewAviso"

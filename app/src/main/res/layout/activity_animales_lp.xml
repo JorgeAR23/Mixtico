@@ -5,12 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:contentDescription="@string/botonRegresar">
+    android:contentDescription="@string/descripciones">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".AnimalesLP">
 
         <TextView
@@ -21,28 +20,178 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="134dp"
             android:fontFamily="sans-serif-black"
-            android:text="ANIMALES"
-            android:textColor="#020202"
+            android:text="COLORES"
+            android:textAlignment="center"
             android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Comenzar\nPrueba"
+            android:textAlignment="center"
+            android:textColor="#28858D"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPrueba" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPrueba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="#00000000"
+            android:contentDescription="Boton Prueba"
+            android:onClick="Prueba"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/test" />
+
         <ImageButton
             android:id="@+id/regresarButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="24dp"
-            android:background="#FFFFFF"
+            android:background="#00000000"
             android:contentDescription="Boton Regresar"
             android:onClick="Inicio"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrowback" />
 
+        <ImageButton
+            android:id="@+id/imageButtonRojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            android:onClick="Rojo"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonAzul"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitulo2"
+            app:srcCompat="@drawable/rojo" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAzul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitulo2"
+            app:srcCompat="@drawable/azul" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonRojo"
+            app:srcCompat="@drawable/verde" />
+
+        <ImageButton
+            android:id="@+id/imageButton15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAzul"
+            app:srcCompat="@drawable/amarillo" />
+
+        <ImageButton
+            android:id="@+id/imageButton17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton12"
+            app:srcCompat="@drawable/cafe" />
+
+        <ImageButton
+            android:id="@+id/imageButton16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton15"
+            app:srcCompat="@drawable/anaranjado" />
+
+        <ImageButton
+            android:id="@+id/imageButton20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton17"
+            app:srcCompat="@drawable/negro" />
+
+        <ImageButton
+            android:id="@+id/imageButton21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton16"
+            app:srcCompat="@drawable/blanco" />
+
+        <TextView
+            android:id="@+id/textViewAviso"
+            android:layout_width="330dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Presiona para escuchar la pronunciación de las palabras"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton21" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-
-
