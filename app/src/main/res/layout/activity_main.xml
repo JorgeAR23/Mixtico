@@ -18,6 +18,30 @@
             android:background="#00FFFFFF"
             tools:context=".MainActivity">
 
+            <ImageButton
+                android:id="@+id/imageButtonDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/descripciones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sun" />
+
+            <ImageButton
+                android:id="@+id/imageButtonNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/descripciones"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/moon" />
+
             <TextView
                 android:id="@+id/textTitulo"
                 android:layout_width="wrap_content"
@@ -37,7 +61,7 @@
                 android:id="@+id/textViewAnimales"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
@@ -54,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
@@ -66,9 +90,9 @@
                 android:id="@+id/textViewPronombres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="91dp"
+                android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
@@ -83,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
@@ -95,9 +119,9 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="91dp"
+                android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
@@ -112,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textSize="20sp"
@@ -201,6 +225,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSemana"
                 app:srcCompat="@mipmap/saludos" />
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

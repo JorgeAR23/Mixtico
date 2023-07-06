@@ -152,6 +152,7 @@ public class ColoresP1 extends AppCompatActivity {
         mostrarDialogoDeConfirmacion();
     }
 
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

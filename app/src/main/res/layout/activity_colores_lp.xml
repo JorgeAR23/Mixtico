@@ -21,8 +21,8 @@
             android:layout_marginEnd="134dp"
             android:fontFamily="sans-serif-black"
             android:text="COLORES"
-            android:textSize="48sp"
             android:textAlignment="center"
+            android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -177,8 +177,21 @@
             app:layout_constraintTop_toBottomOf="@+id/imageButton16"
             app:srcCompat="@mipmap/blanco" />
 
+        <TextView
+            android:id="@+id/textViewAviso"
+            android:layout_width="330dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Presiona para escuchar la pronunciación de las palabras"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton21" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-
-

@@ -24,37 +24,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="147dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="147dp"
         android:fontFamily="sans-serif-black"
-        android:text="COLORES"
         android:gravity="center"
+        android:text="COLORES"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="147dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="144dp"
         android:fontFamily="sans-serif-black"
-        android:text="PREGUNTA 1"
         android:gravity="center"
+        android:text="PREGUNTA 1"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSeccion" />
 
     <EditText
         android:id="@+id/editTextMultiLine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="341dp"
+        android:layout_height="132dp"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="66dp"
         android:autofillHints="null"
         android:ems="10"
@@ -69,15 +69,15 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="260dp"
+        android:layout_width="317dp"
         android:layout_height="223dp"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="161dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="162dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPregunta">
+        app:layout_constraintTop_toBottomOf="@+id/editTextMultiLine">
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -89,7 +89,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Kuá'a"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -101,7 +101,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Kii"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
@@ -113,7 +113,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Laoe"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/radioButton4"
@@ -124,7 +124,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Kuni"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
     </RadioGroup>
 
     <ImageView

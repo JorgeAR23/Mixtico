@@ -23,7 +23,7 @@ public class ColoresP5 extends AppCompatActivity {
     ImageView correctoimg, incorrectoimg;
     TextView correctotxt, incorrectotxt;
     Button button1;
-    MediaPlayer sonidoC, sonidoI;
+    MediaPlayer sonidoC, sonidoI, vozPregunta;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -46,6 +46,7 @@ public class ColoresP5 extends AppCompatActivity {
         editText.setKeyListener(null);
         sonidoC = MediaPlayer.create(this, R.raw.sonido_correcto);
         sonidoI = MediaPlayer.create(this, R.raw.sonido_incorrecto);
+        vozPregunta = MediaPlayer.create(this, R.raw.sonido_incorrecto);
         sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
@@ -53,7 +54,7 @@ public class ColoresP5 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb1.isChecked()) {
+        if(rb2.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -72,7 +73,7 @@ public class ColoresP5 extends AppCompatActivity {
             new Handler().postDelayed(this::Salir, 2000);
 
         }
-        else if(rb2.isChecked()) {
+        else if(rb1.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -152,6 +153,8 @@ public class ColoresP5 extends AppCompatActivity {
         mostrarDialogoDeConfirmacion();
     }
 
+    public void reproducirVoz(View view) {vozPregunta.start();}
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -161,6 +164,9 @@ public class ColoresP5 extends AppCompatActivity {
         } else if (sonidoI != null) {
             sonidoI.release();
             sonidoI = null;
+        } else if (vozPregunta != null) {
+            vozPregunta.release();
+            vozPregunta = null;
         }
     }
     //Metodo para elegir que hace el boton de Regresar, si esta vacio lo desactiva

@@ -7,7 +7,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,15 +18,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 //comment
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvColores;
     public BottomNavigationView bottomNavigationView;
+    TextView tvColores;
+    ImageButton bDia;
+    ImageButton bNoche;
 
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bDia = findViewById(R.id.imageButtonDay);
+        bNoche = findViewById(R.id.imageButtonNight);
+
 
         tvColores = findViewById(R.id.textViewColores);
         SharedPreferences sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
@@ -34,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         int aciertoColor5 = sharedPreferences.getInt("aciertoColor5", 0);
         int aciertosColor = aciertoColor1 + aciertoColor2 + aciertoColor3 + aciertoColor4 + aciertoColor5;
         String aciertosColorString = String.valueOf(aciertosColor);
-        tvColores.setText(aciertosColorString + "/5 aciertos");
+        tvColores.setText(aciertosColorString + "/5 Aciertos");
 
 
 
@@ -87,9 +95,6 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-
-
 
     //Metodo para ir a AnimalesLP
     public void Animales(View view){

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColoresP1">
+    tools:context=".ColoresP5">
 
     <ImageButton
         android:id="@+id/regresarButton"
@@ -24,43 +24,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="147dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="147dp"
         android:fontFamily="sans-serif-black"
-        android:text="COLORES"
         android:gravity="center"
+        android:text="COLORES"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="147dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="144dp"
         android:fontFamily="sans-serif-black"
+        android:gravity="center"
         android:text="PREGUNTA 3"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSeccion" />
 
     <EditText
         android:id="@+id/editTextMultiLine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="341dp"
+        android:layout_height="132dp"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="66dp"
         android:autofillHints="null"
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿Como se le nombra al color cafe en mixteco?"
+        android:text="¿Como se le nombra al color rojo en mixteco?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,15 +69,15 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="260dp"
+        android:layout_width="317dp"
         android:layout_height="223dp"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="161dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="162dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPregunta">
+        app:layout_constraintTop_toBottomOf="@+id/editTextMultiLine">
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -86,9 +87,9 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Cael"
+            android:text="Kuá'a"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -98,9 +99,9 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Lidan"
+            android:text="Kii"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
@@ -110,9 +111,9 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Puak"
+            android:text="Laoe"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/radioButton4"
@@ -121,9 +122,9 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Ivni"
+            android:text="Kuni"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
     </RadioGroup>
 
     <ImageView
