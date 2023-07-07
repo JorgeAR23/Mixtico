@@ -27,6 +27,7 @@
                 android:layout_marginTop="25dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/descripciones"
+                android:onClick="ModoClaro"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/sun" />
@@ -39,6 +40,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/descripciones"
+                android:onClick="ModoOscuro"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/moon" />
@@ -199,7 +201,7 @@
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewColores"
-                app:srcCompat="@drawable/semana" />
+                app:srcCompat="@drawable/calendario" />
 
             <ImageButton
                 android:id="@+id/regresarButton"

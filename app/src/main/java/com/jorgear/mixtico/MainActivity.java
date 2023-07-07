@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         bDia = findViewById(R.id.imageButtonDay);
         bNoche = findViewById(R.id.imageButtonNight);
 
-
         tvColores = findViewById(R.id.textViewColores);
         SharedPreferences sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         int aciertoColor1 = sharedPreferences.getInt("aciertoColor1", 0);

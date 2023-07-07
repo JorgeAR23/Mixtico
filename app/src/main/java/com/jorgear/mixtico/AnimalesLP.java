@@ -15,12 +15,18 @@ public class AnimalesLP extends AppCompatActivity {
     }
 
 
-
-
-
     //Metodo para regresar a Inicio
     public void Inicio(View view){
         Intent inicio = new Intent(this, MainActivity.class);
         startActivity(inicio);
+    }
+
+    //Metodo para ir a Prueba
+    public void Prueba(View view){
+        Intent prueba = new Intent(this, ColoresP1.class);
+        startActivity(prueba);
+    }
+
+    public void Gato(View view){
     }
 }

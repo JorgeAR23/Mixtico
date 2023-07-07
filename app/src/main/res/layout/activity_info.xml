@@ -40,7 +40,7 @@
                 android:layout_marginEnd="56dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="La lengua mixteca es la tercer lengua indigena mas hablada actualmente en nuestro pais, pero a causa de distintos factores en la sociedad,
-                esta esta desapareciendo y cada vez hay menos personas hablantes de la misma. \n\nEste ha sido el motivo que nos impulso a crear esta App, mediante la cual la gente podra aprender sobre la lengua mixteca, con el proposito de que se interesen en esta hermosa lengua y practiquen dia a dia para que, en un futuro, puedan inclusive entablar conversaciones con hablantes nativos de la misma. "
+                esta desapareciendo y cada vez hay menos personas hablantes de la misma. \n\nEste ha sido el motivo que nos impulso a crear esta App, mediante la cual la gente podra aprender sobre la lengua mixteca, con el proposito de que se interesen en esta hermosa lengua y practiquen dia a dia para que, en un futuro, puedan inclusive entablar conversaciones con hablantes nativos de la misma. "
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
