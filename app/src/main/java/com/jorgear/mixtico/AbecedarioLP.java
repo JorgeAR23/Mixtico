@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AnimalesLP extends AppCompatActivity {
+public class AbecedarioLP extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_lp);
+        setContentView(R.layout.activity_abecedario_lp);
     }
-
 
     //Metodo para regresar a Inicio
     public void Inicio(View view){
@@ -23,7 +22,7 @@ public class AnimalesLP extends AppCompatActivity {
 
     //Metodo para ir a Prueba
     public void Prueba(View view){
-        Intent prueba = new Intent(this, AnimalesP1.class);
+        Intent prueba = new Intent(this, ColoresP1.class);
         startActivity(prueba);
     }
 

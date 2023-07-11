@@ -54,7 +54,7 @@ public class ColoresP5 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb2.isChecked()) {
+        if(rb4.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -73,7 +73,7 @@ public class ColoresP5 extends AppCompatActivity {
             new Handler().postDelayed(this::Salir, 2000);
 
         }
-        else if(rb1.isChecked()) {
+        else if(rb2.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -99,7 +99,7 @@ public class ColoresP5 extends AppCompatActivity {
             new Handler().postDelayed(this::Salir, 2000);
 
         }
-        else if(rb4.isChecked()) {
+        else if(rb1.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -133,12 +133,6 @@ public class ColoresP5 extends AppCompatActivity {
 
         AlertDialog dialog = builder.create();
         dialog.show();
-    }
-
-    //Metodo para ir a la siguiente pregunta
-    public void p5(){
-        Intent p5 = new Intent(this, ColoresP5.class);
-        startActivity(p5);
     }
 
     //Metodo para salir a Inicio

@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="16dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/descripciones"
                 android:onClick="ModoClaro"
@@ -36,7 +36,7 @@
                 android:id="@+id/imageButtonNight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="20dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/descripciones"
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="134dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="134dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/textTitulo"
@@ -61,7 +61,19 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewAnimales"
+                android:id="@+id/lineaTitle"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="#787777"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+
+            <TextView
+                android:id="@+id/textViewAbecedario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
@@ -74,7 +86,35 @@
                 app:layout_constraintEnd_toStartOf="@+id/textViewColores"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonAbecedario" />
+
+            <TextView
+                android:id="@+id/textViewAnimales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonAnimales" />
+
+            <TextView
+                android:id="@+id/textViewCalendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="88dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonCalendario" />
 
             <TextView
                 android:id="@+id/textViewColores"
@@ -87,28 +127,83 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonColores" />
+
+            <TextView
+                android:id="@+id/textViewCuerpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="88dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonCuerpo" />
+
+            <TextView
+                android:id="@+id/textViewEmociones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonEmociones" />
+
+            <TextView
+                android:id="@+id/textViewFamilia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="88dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonFamilia" />
+
+            <TextView
+                android:id="@+id/textViewNumeros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonNumeros" />
+
+            <TextView
+                android:id="@+id/textViewObjetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="88dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonObjetos" />
 
             <TextView
                 android:id="@+id/textViewPronombres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="88dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/textViewAciertos"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/textViewSemana"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
-
-            <TextView
-                android:id="@+id/textViewSemana"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="48dp"
                 android:fontFamily="sans-serif-medium"
@@ -116,10 +211,10 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonPronombres" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textViewSaludos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
@@ -129,13 +224,12 @@
                 android:text="@string/textViewAciertos"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/textView6"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/regresarButton" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSaludos" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textViewVerbos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -145,39 +239,51 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonVerbos" />
+
+            <TextView
+                android:id="@+id/textViewLimite"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="80dp"
+                android:fontFamily="sans-serif-medium"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonVerbos" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButtonAbecedario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="34dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                android:onClick="Animales"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-                app:layout_constraintHorizontal_bias="0.0"
+                android:onClick="Abecedario"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-                app:srcCompat="@drawable/animales" />
+                app:srcCompat="@drawable/abecedario" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imageButtonAnimales"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                android:onClick="Colores"
+                android:onClick="Animales"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-                app:srcCompat="@drawable/colores" />
+                app:srcCompat="@drawable/animales" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imageButtonCalendario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -185,14 +291,40 @@
                 android:layout_marginEnd="34dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton4"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewAnimales"
-                app:srcCompat="@drawable/pronombres" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewAbecedario"
+                app:srcCompat="@drawable/calendario" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imageButtonColores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                android:onClick="Colores"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAnimales"
+                app:srcCompat="@drawable/colores" />
+
+            <ImageButton
+                android:id="@+id/imageButtonCuerpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="34dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCalendario"
+                app:srcCompat="@drawable/emociones" />
+
+            <ImageButton
+                android:id="@+id/imageButtonEmociones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -201,10 +333,10 @@
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewColores"
-                app:srcCompat="@drawable/calendario" />
+                app:srcCompat="@drawable/emociones" />
 
             <ImageButton
-                android:id="@+id/regresarButton"
+                android:id="@+id/imageButtonFamilia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -212,14 +344,13 @@
                 android:layout_marginEnd="34dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton6"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewPronombres"
-                app:srcCompat="@drawable/emociones" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewCuerpo"
+                app:srcCompat="@drawable/familia" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/imageButtonNumeros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -227,9 +358,61 @@
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewSemana"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEmociones"
+                app:srcCompat="@drawable/numeros" />
+
+            <ImageButton
+                android:id="@+id/imageButtonObjetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="34dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFamilia"
+                app:srcCompat="@drawable/emociones" />
+
+            <ImageButton
+                android:id="@+id/imageButtonPronombres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                android:onClick="Pronombres"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNumeros"
+                app:srcCompat="@drawable/pronombres" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSaludos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="34dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetos"
                 app:srcCompat="@drawable/saludos" />
 
+            <ImageButton
+                android:id="@+id/imageButtonVerbos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPronombres"
+                app:srcCompat="@drawable/emociones" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

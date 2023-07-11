@@ -16,25 +16,27 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class ColoresP4 extends AppCompatActivity {
+public class AnimalesP1 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
     ImageView correctoimg, incorrectoimg;
     TextView correctotxt, incorrectotxt;
     Button button1;
-    MediaPlayer sonidoC, sonidoI;
+    MediaPlayer sonidoC, sonidoI, vozPregunta;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colores_p4);
+        setContentView(R.layout.activity_animales_p1);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
         rb2 = findViewById(R.id.radioButton2);
+        rb3 = findViewById(R.id.radioButton3);
+        rb4 = findViewById(R.id.radioButton4);
         correctoimg = findViewById(R.id.correcto);
         incorrectoimg = findViewById(R.id.incorrecto);
         correctotxt = findViewById(R.id.respuestaCorrecta);
@@ -44,6 +46,7 @@ public class ColoresP4 extends AppCompatActivity {
         editText.setKeyListener(null);
         sonidoC = MediaPlayer.create(this, R.raw.sonido_correcto);
         sonidoI = MediaPlayer.create(this, R.raw.sonido_incorrecto);
+        vozPregunta = MediaPlayer.create(this, R.raw.sonido_incorrecto);
         sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
@@ -51,7 +54,7 @@ public class ColoresP4 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb1.isChecked()) {
+        if(rb3.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -63,11 +66,11 @@ public class ColoresP4 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoColor4", 1);
+            editor.putInt("aciertoAnimal1", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p5, 2000);
+            new Handler().postDelayed(this::P2, 2000);
 
         }
         else if(rb2.isChecked()) {
@@ -80,10 +83,10 @@ public class ColoresP4 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p5, 2000);
+            new Handler().postDelayed(this::P2, 2000);
 
         }
-        else if(rb3.isChecked()) {
+        else if(rb1.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -93,7 +96,7 @@ public class ColoresP4 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p5, 2000);
+            new Handler().postDelayed(this::P2, 2000);
 
         }
         else if(rb4.isChecked()) {
@@ -106,7 +109,7 @@ public class ColoresP4 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p5, 2000);
+            new Handler().postDelayed(this::P2, 2000);
 
         }
     }
@@ -133,9 +136,9 @@ public class ColoresP4 extends AppCompatActivity {
     }
 
     //Metodo para ir a la siguiente pregunta
-    public void p5(){
-        Intent p5 = new Intent(this, ColoresP5.class);
-        startActivity(p5);
+    public void P2(){
+        Intent p2 = new Intent(this, AnimalesP2.class);
+        startActivity(p2);
     }
 
     //Metodo para salir a Inicio
@@ -150,6 +153,8 @@ public class ColoresP4 extends AppCompatActivity {
         mostrarDialogoDeConfirmacion();
     }
 
+    public void reproducirVoz(View view) {vozPregunta.start();}
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -159,6 +164,9 @@ public class ColoresP4 extends AppCompatActivity {
         } else if (sonidoI != null) {
             sonidoI.release();
             sonidoI = null;
+        } else if (vozPregunta != null) {
+            vozPregunta.release();
+            vozPregunta = null;
         }
     }
     //Metodo para elegir que hace el boton de Regresar, si esta vacio lo desactiva

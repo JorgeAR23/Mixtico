@@ -19,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     public BottomNavigationView bottomNavigationView;
-    TextView tvColores;
+    TextView tvAnimales, tvColores;
     ImageButton bDia;
     ImageButton bNoche;
 
@@ -32,18 +32,30 @@ public class MainActivity extends AppCompatActivity {
         bDia = findViewById(R.id.imageButtonDay);
         bNoche = findViewById(R.id.imageButtonNight);
 
+        tvAnimales = findViewById(R.id.textViewAnimales);
+        SharedPreferences sharedPreferencesAnimal = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        int aciertoAnimal1 = sharedPreferencesAnimal.getInt("aciertoAnimal1", 0);
+        int aciertoAnimal2 = sharedPreferencesAnimal.getInt("aciertoAnimal2", 0);
+        int aciertoAnimal3 = sharedPreferencesAnimal.getInt("aciertoAnimal3", 0);
+        int aciertoAnimal4 = sharedPreferencesAnimal.getInt("aciertoAnimal4", 0);
+        int aciertoAnimal5 = sharedPreferencesAnimal.getInt("aciertoAnimal5", 0);
+        int aciertosAnimal = aciertoAnimal1 + aciertoAnimal2 + aciertoAnimal3 + aciertoAnimal4 + aciertoAnimal5;
+        String aciertosAnimalString = String.valueOf(aciertosAnimal);
+        tvAnimales.setText(aciertosAnimalString + "/5 Aciertos");
+
         tvColores = findViewById(R.id.textViewColores);
-        SharedPreferences sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
-        int aciertoColor1 = sharedPreferences.getInt("aciertoColor1", 0);
-        int aciertoColor2 = sharedPreferences.getInt("aciertoColor2", 0);
-        int aciertoColor3 = sharedPreferences.getInt("aciertoColor3", 0);
-        int aciertoColor4 = sharedPreferences.getInt("aciertoColor4", 0);
-        int aciertoColor5 = sharedPreferences.getInt("aciertoColor5", 0);
+        SharedPreferences sharedPreferencesColor = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        int aciertoColor1 = sharedPreferencesColor.getInt("aciertoColor1", 0);
+        int aciertoColor2 = sharedPreferencesColor.getInt("aciertoColor2", 0);
+        int aciertoColor3 = sharedPreferencesColor.getInt("aciertoColor3", 0);
+        int aciertoColor4 = sharedPreferencesColor.getInt("aciertoColor4", 0);
+        int aciertoColor5 = sharedPreferencesColor.getInt("aciertoColor5", 0);
         int aciertosColor = aciertoColor1 + aciertoColor2 + aciertoColor3 + aciertoColor4 + aciertoColor5;
         String aciertosColorString = String.valueOf(aciertosColor);
         tvColores.setText(aciertosColorString + "/5 Aciertos");
-
-
+        if(aciertosColorString.equals("5"))  {
+            tvColores.setTextColor(getResources().getColor(R.color.green));
+        }
 
         // Obtione la referencia al BottomNavigationView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -74,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    //Metodo para ir a AnimalesLP
+    public void Abecedario(View view){
+        Intent abecedario = new Intent(this, AbecedarioLP.class);
+        startActivity(abecedario);
+    }
 
     //Metodo para ir a AnimalesLP
     public void Animales(View view){

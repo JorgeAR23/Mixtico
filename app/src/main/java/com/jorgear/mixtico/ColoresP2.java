@@ -53,7 +53,7 @@ public class ColoresP2 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb1.isChecked()) {
+        if(rb3.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -85,7 +85,7 @@ public class ColoresP2 extends AppCompatActivity {
             new Handler().postDelayed(this::p3, 2000);
 
         }
-        else if(rb3.isChecked()) {
+        else if(rb1.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {

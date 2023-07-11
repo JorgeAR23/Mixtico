@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColoresP4">
+    tools:context=".AnimalesP1">
 
     <ImageButton
         android:id="@+id/regresarButton"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="147dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="COLORES"
+        android:text="ANIMALES"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
         android:layout_marginEnd="144dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="PREGUNTA 4"
+        android:text="PREGUNTA 2"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="Kuîí es color verde en mixteco. ¿Es correcto?"
+        android:text="¿En cual de las siguientes opciones en Mixteco se encuentra el animal mas lento del planeta?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Sí"
+            android:text="Koó"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -99,10 +99,32 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="No"
+            android:text="Tiúun"
             android:textAlignment="center"
             android:textSize="24sp" />
 
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/custom_radio_button"
+            android:button="@null"
+            android:fontFamily="sans-serif-black"
+            android:text="Ti̠kó i̠í"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button"
+            android:button="@null"
+            android:fontFamily="sans-serif-black"
+            android:text="Leko"
+            android:textAlignment="center"
+            android:textSize="24sp" />
     </RadioGroup>
 
     <ImageView

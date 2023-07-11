@@ -10,19 +10,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".AnimalesLP">
+        tools:context=".AbecedarioLP">
 
         <TextView
             android:id="@+id/textTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="137dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="137dp"
             android:fontFamily="sans-serif-black"
-            android:text="ANIMALES"
+            android:text="ABECEDARIO"
             android:textAlignment="center"
-            android:textSize="44sp"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -172,7 +172,7 @@
             app:srcCompat="@drawable/blanco" />
 
         <ImageButton
-            android:id="@+id/imageButtonCaracol"
+            android:id="@+id/imageButtonColibri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -186,32 +186,6 @@
             app:srcCompat="@drawable/negro" />
 
         <ImageButton
-            android:id="@+id/imageButtonCodorniz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/rounded_button"
-            android:contentDescription="@string/descripciones"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonCangrejo"
-            app:srcCompat="@drawable/blanco" />
-
-        <ImageButton
-            android:id="@+id/imageButtonColibri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="41dp"
-            android:background="@drawable/rounded_button"
-            android:contentDescription="@string/descripciones"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonCaracol"
-            app:srcCompat="@drawable/negro" />
-
-        <ImageButton
             android:id="@+id/imageButtonConejo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -220,7 +194,7 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonCodorniz"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCangrejo"
             app:srcCompat="@drawable/blanco" />
 
         <ImageButton
@@ -628,7 +602,7 @@
             app:srcCompat="@drawable/negro" />
 
         <ImageButton
-            android:id="@+id/imageButtonZancudo"
+            android:id="@+id/imageButtonVibora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -640,7 +614,7 @@
             app:srcCompat="@drawable/blanco" />
 
         <ImageButton
-            android:id="@+id/imageButtonZorrillo"
+            android:id="@+id/imageButtonZancudo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -662,7 +636,7 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonZancudo"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonVibora"
             app:srcCompat="@drawable/blanco" />
 
         <TextView

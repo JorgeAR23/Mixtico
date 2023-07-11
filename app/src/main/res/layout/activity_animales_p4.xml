@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColoresP4">
+    tools:context=".AnimalesP1">
 
     <ImageButton
         android:id="@+id/regresarButton"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="147dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="COLORES"
+        android:text="ANIMALES"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="Kuîí es color verde en mixteco. ¿Es correcto?"
+        android:text="Ya̠kuín en español significa armadillo ¿Es correcto?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

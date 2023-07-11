@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿Que palabra se esta pronunciando en el siguiente audio?"
+        android:text="Yá'a, ¿A qué color se refiere?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Kuá'a"
+            android:text="Amarillo"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -99,7 +99,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Kii"
+            android:text="Negro"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -111,7 +111,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Laoe"
+            android:text="Blanco"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -122,7 +122,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Kuni"
+            android:text="Café"
             android:textAlignment="center"
             android:textSize="24sp" />
     </RadioGroup>
@@ -199,22 +199,5 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/respuestaCorrecta" />
-
-    <ImageButton
-        android:id="@+id/vozButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="10dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/descripciones"
-        android:onClick="reproducirVoz"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMultiLine"
-        app:srcCompat="@drawable/sound" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
