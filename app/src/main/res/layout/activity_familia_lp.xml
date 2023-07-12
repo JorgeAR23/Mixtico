@@ -10,19 +10,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".AbecedarioLP">
+        tools:context=".AnimalesLP">
 
         <TextView
             android:id="@+id/textTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="137dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="137dp"
             android:fontFamily="sans-serif-black"
-            android:text="ABECEDARIO"
+            android:text="FAMILIA"
             android:textAlignment="center"
-            android:textSize="40sp"
+            android:textSize="44sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -69,7 +69,7 @@
             app:srcCompat="@drawable/arrowback" />
 
         <ImageButton
-            android:id="@+id/imageButtonA"
+            android:id="@+id/imageButtonAbuela"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -79,10 +79,10 @@
             android:onClick="Gato"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-            app:srcCompat="@drawable/gato" />
+            app:srcCompat="@drawable/abuela" />
 
         <ImageButton
-            android:id="@+id/imageButtonE"
+            android:id="@+id/imageButtonAbuelo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -91,10 +91,10 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-            app:srcCompat="@drawable/azul" />
+            app:srcCompat="@drawable/abuelo" />
 
         <ImageButton
-            android:id="@+id/imageButtonI"
+            android:id="@+id/imageButtonBebe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -104,11 +104,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonA"
-            app:srcCompat="@drawable/verde" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAbuela"
+            app:srcCompat="@drawable/bebe" />
 
         <ImageButton
-            android:id="@+id/imageButtonJ"
+            android:id="@+id/imageButtonBisabuelo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -116,11 +116,11 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonE"
-            app:srcCompat="@drawable/amarillo" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAbuelo"
+            app:srcCompat="@drawable/bisabuelo" />
 
         <ImageButton
-            android:id="@+id/imageButtonK"
+            android:id="@+id/imageButtonCompadre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -130,11 +130,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonI"
-            app:srcCompat="@drawable/cafe" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBebe"
+            app:srcCompat="@drawable/compadre" />
 
         <ImageButton
-            android:id="@+id/imageButtonL"
+            android:id="@+id/imageButtonCuñada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -142,11 +142,11 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonJ"
-            app:srcCompat="@drawable/anaranjado" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBisabuelo"
+            app:srcCompat="@drawable/cu_ada" />
 
         <ImageButton
-            android:id="@+id/imageButtonM"
+            android:id="@+id/imageButtonCuñado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -156,11 +156,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonK"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCompadre"
+            app:srcCompat="@drawable/cu_ado" />
 
         <ImageButton
-            android:id="@+id/imageButtonN"
+            android:id="@+id/imageButtonEsposa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -168,11 +168,11 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonL"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCuñada"
+            app:srcCompat="@drawable/esposa" />
 
         <ImageButton
-            android:id="@+id/imageButtonÑ"
+            android:id="@+id/imageButtonEsposo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -182,11 +182,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonM"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCuñado"
+            app:srcCompat="@drawable/esposo" />
 
         <ImageButton
-            android:id="@+id/imageButtonO"
+            android:id="@+id/imageButtonHermanaH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -194,11 +194,11 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonN"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEsposa"
+            app:srcCompat="@drawable/hermanah" />
 
         <ImageButton
-            android:id="@+id/imageButtonP"
+            android:id="@+id/imageButtonHermanaM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -208,11 +208,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonÑ"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEsposo"
+            app:srcCompat="@drawable/hermanam" />
 
         <ImageButton
-            android:id="@+id/imageButtonR"
+            android:id="@+id/imageButtonHermanoH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -220,11 +220,11 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonO"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanaH"
+            app:srcCompat="@drawable/hermanoh" />
 
         <ImageButton
-            android:id="@+id/imageButtonS"
+            android:id="@+id/imageButtonHermanoM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -234,11 +234,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonP"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanaM"
+            app:srcCompat="@drawable/hermanom" />
 
         <ImageButton
-            android:id="@+id/imageButtonT"
+            android:id="@+id/imageButtonHijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -246,11 +246,11 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonR"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanoH"
+            app:srcCompat="@drawable/hijo" />
 
         <ImageButton
-            android:id="@+id/imageButtonU"
+            android:id="@+id/imageButtonMama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -260,11 +260,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonS"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanoM"
+            app:srcCompat="@drawable/mama" />
 
         <ImageButton
-            android:id="@+id/imageButtonV"
+            android:id="@+id/imageButtonNieto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -272,11 +272,63 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonT"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHijo"
+            app:srcCompat="@drawable/nieto" />
 
         <ImageButton
-            android:id="@+id/imageButtonX"
+            android:id="@+id/imageButtonPadrastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMama"
+            app:srcCompat="@drawable/padrastro" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPadrino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonNieto"
+            app:srcCompat="@drawable/padrino" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPadrastro"
+            app:srcCompat="@drawable/papa" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPariente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPadrino"
+            app:srcCompat="@drawable/pariente" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPrimaH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -286,11 +338,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonU"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPapa"
+            app:srcCompat="@drawable/primah" />
 
         <ImageButton
-            android:id="@+id/imageButtonY"
+            android:id="@+id/imageButtonPrimaM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -298,9 +350,86 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonV"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPariente"
+            app:srcCompat="@drawable/primam" />
 
+        <ImageButton
+            android:id="@+id/imageButtonPrimoH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimaH"
+            app:srcCompat="@drawable/primoh" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPrimoM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimaM"
+            app:srcCompat="@drawable/primom" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSobrina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimoH"
+            app:srcCompat="@drawable/sobrina" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSobrino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimoM"
+            app:srcCompat="@drawable/sobrino" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonSobrina"
+            app:srcCompat="@drawable/tia" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonSobrino"
+            app:srcCompat="@drawable/tio" />
 
         <TextView
             android:id="@+id/textViewAviso"
@@ -315,7 +444,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonY" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonTia" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

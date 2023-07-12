@@ -105,6 +105,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(colores);
     }
 
+
+    //Metodo para ir a FamiliaLP
+    public void Familia(View view){
+        Intent familia = new Intent(this, FamiliaLP.class);
+        startActivity(familia);
+    }
+
     //Metodo para ir a PronombresLP
     public void Pronombres(View view){
         Intent pronombres = new Intent(this, PronombresLP.class);

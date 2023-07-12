@@ -14,7 +14,6 @@ public class AnimalesLP extends AppCompatActivity {
         setContentView(R.layout.activity_animales_lp);
     }
 
-
     //Metodo para regresar a Inicio
     public void Inicio(View view){
         Intent inicio = new Intent(this, MainActivity.class);
