@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class AnimalesP5 extends AppCompatActivity {
+public class CuerpoP5 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
@@ -30,13 +30,11 @@ public class AnimalesP5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_p5);
+        setContentView(R.layout.activity_cuerpo_p5);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
         rb2 = findViewById(R.id.radioButton2);
-        rb3 = findViewById(R.id.radioButton3);
-        rb4 = findViewById(R.id.radioButton4);
         correctoimg = findViewById(R.id.correcto);
         incorrectoimg = findViewById(R.id.incorrecto);
         correctotxt = findViewById(R.id.respuestaCorrecta);
@@ -54,7 +52,7 @@ public class AnimalesP5 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb2.isChecked()) {
+        if(rb1.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -66,14 +64,14 @@ public class AnimalesP5 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal5", 1);
+            editor.putInt("aciertoAnimal1", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
             new Handler().postDelayed(this::Salir, 2000);
 
         }
-        else if(rb1.isChecked()) {
+        else if(rb2.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {

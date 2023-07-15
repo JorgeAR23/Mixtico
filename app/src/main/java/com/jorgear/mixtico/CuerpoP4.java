@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class AnimalesP5 extends AppCompatActivity {
+public class CuerpoP4 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
@@ -30,13 +30,11 @@ public class AnimalesP5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_p5);
+        setContentView(R.layout.activity_cuerpo_p4);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
         rb2 = findViewById(R.id.radioButton2);
-        rb3 = findViewById(R.id.radioButton3);
-        rb4 = findViewById(R.id.radioButton4);
         correctoimg = findViewById(R.id.correcto);
         incorrectoimg = findViewById(R.id.incorrecto);
         correctotxt = findViewById(R.id.respuestaCorrecta);
@@ -66,11 +64,11 @@ public class AnimalesP5 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal5", 1);
+            editor.putInt("aciertoAnimal1", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::Salir, 2000);
+            new Handler().postDelayed(this::P5, 2000);
 
         }
         else if(rb1.isChecked()) {
@@ -83,7 +81,7 @@ public class AnimalesP5 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::Salir, 2000);
+            new Handler().postDelayed(this::P5, 2000);
 
         }
         else if(rb3.isChecked()) {
@@ -96,7 +94,7 @@ public class AnimalesP5 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::Salir, 2000);
+            new Handler().postDelayed(this::P5, 2000);
 
         }
         else if(rb4.isChecked()) {
@@ -109,7 +107,7 @@ public class AnimalesP5 extends AppCompatActivity {
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::Salir, 2000);
+            new Handler().postDelayed(this::P5, 2000);
 
         }
     }
@@ -135,6 +133,11 @@ public class AnimalesP5 extends AppCompatActivity {
         dialog.show();
     }
 
+    //Metodo para ir a la siguiente pregunta
+    public void P5(){
+        Intent p5 = new Intent(this, CuerpoP5.class);
+        startActivity(p5);
+    }
 
     //Metodo para salir a Inicio
     public void Salir() {

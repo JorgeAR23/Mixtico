@@ -1,15 +1,11 @@
 package com.jorgear.mixtico;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -89,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo para ir a AnimalesLP
     public void Abecedario(View view){
-        Intent abecedario = new Intent(this, AbecedarioLP.class);
+        Intent abecedario = new Intent(this, AdverbiosLP.class);
         startActivity(abecedario);
     }
 
@@ -103,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
     public void Colores(View view){
         Intent colores = new Intent(this, ColoresLP.class);
         startActivity(colores);
+    }
+
+    //Metodo para ir a ColoresLP
+    public void Cuerpo(View view){
+        Intent cuerpo = new Intent(this, CuerpoLP.class);
+        startActivity(cuerpo);
     }
 
 

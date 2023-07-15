@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AbecedarioLP extends AppCompatActivity {
+public class AdverbiosLP extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abecedario_lp);
+        setContentView(R.layout.activity_adverbios_lp);
     }
 
     //Metodo para regresar a Inicio

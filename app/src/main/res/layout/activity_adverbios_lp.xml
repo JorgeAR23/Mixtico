@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".AbecedarioLP">
+        tools:context=".AdverbiosLP">
 
         <TextView
             android:id="@+id/textTitulo"
@@ -20,7 +20,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="137dp"
             android:fontFamily="sans-serif-black"
-            android:text="ABECEDARIO"
+            android:text="ADVERBIOS"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"

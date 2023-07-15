@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class FamiliaLP extends AppCompatActivity {
+public class CuerpoLP extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_familia_lp);
+        setContentView(R.layout.activity_cuerpo_lp);
     }
 
     //Metodo para regresar a Inicio
@@ -22,7 +22,7 @@ public class FamiliaLP extends AppCompatActivity {
 
     //Metodo para ir a Prueba
     public void Prueba(View view){
-        Intent prueba = new Intent(this, FamiliaP1.class);
+        Intent prueba = new Intent(this, CuerpoP1.class);
         startActivity(prueba);
     }
 

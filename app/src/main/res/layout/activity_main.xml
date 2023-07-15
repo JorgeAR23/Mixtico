@@ -73,12 +73,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
 
             <TextView
-                android:id="@+id/textViewAbecedario"
+                android:id="@+id/textViewAdverbios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="88dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/textViewAciertos"
                 android:textAlignment="center"
@@ -86,7 +85,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/textViewColores"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonAbecedario" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonAdverbios" />
 
             <TextView
                 android:id="@+id/textViewAnimales"
@@ -102,7 +101,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonAnimales" />
 
             <TextView
-                android:id="@+id/textViewCalendario"
+                android:id="@+id/textViewAnimo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
@@ -114,25 +113,25 @@
                 android:textSize="20sp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonAnimo" />
+
+            <TextView
+                android:id="@+id/textViewCalendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/textViewAciertos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonCalendario" />
 
             <TextView
                 android:id="@+id/textViewColores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="48dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/textViewAciertos"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonColores" />
-
-            <TextView
-                android:id="@+id/textViewCuerpo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="88dp"
@@ -142,10 +141,10 @@
                 android:textSize="20sp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonCuerpo" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonColores" />
 
             <TextView
-                android:id="@+id/textViewEmociones"
+                android:id="@+id/textViewCuerpo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -155,7 +154,7 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonEmociones" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonCuerpo" />
 
             <TextView
                 android:id="@+id/textViewFamilia"
@@ -257,7 +256,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonVerbos" />
 
             <ImageButton
-                android:id="@+id/imageButtonAbecedario"
+                android:id="@+id/imageButtonAdverbios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -267,7 +266,7 @@
                 android:onClick="Abecedario"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-                app:srcCompat="@drawable/abecedario" />
+                app:srcCompat="@drawable/adverbios" />
 
             <ImageButton
                 android:id="@+id/imageButtonAnimales"
@@ -283,7 +282,7 @@
                 app:srcCompat="@drawable/animales" />
 
             <ImageButton
-                android:id="@+id/imageButtonCalendario"
+                android:id="@+id/imageButtonAnimo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -293,11 +292,11 @@
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewAbecedario"
-                app:srcCompat="@drawable/calendario" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewAdverbios"
+                app:srcCompat="@drawable/animo" />
 
             <ImageButton
-                android:id="@+id/imageButtonColores"
+                android:id="@+id/imageButtonCalendario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -307,33 +306,33 @@
                 android:onClick="Colores"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewAnimales"
+                app:srcCompat="@drawable/calendario" />
+
+            <ImageButton
+                android:id="@+id/imageButtonColores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                android:onClick="Colores"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAnimo"
                 app:srcCompat="@drawable/colores" />
 
             <ImageButton
                 android:id="@+id/imageButtonCuerpo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="34dp"
-                android:background="@drawable/rounded_button"
-                android:contentDescription="@string/descripciones"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewCalendario"
-                app:srcCompat="@drawable/emociones" />
-
-            <ImageButton
-                android:id="@+id/imageButtonEmociones"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
+                android:onClick="Cuerpo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewColores"
-                app:srcCompat="@drawable/emociones" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewCalendario"
+                app:srcCompat="@drawable/cuerpo" />
 
             <ImageButton
                 android:id="@+id/imageButtonFamilia"
@@ -347,7 +346,7 @@
                 android:onClick="Familia"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewCuerpo"
+                app:layout_constraintTop_toBottomOf="@+id/textViewColores"
                 app:srcCompat="@drawable/familia" />
 
             <ImageButton
@@ -359,7 +358,7 @@
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewEmociones"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCuerpo"
                 app:srcCompat="@drawable/numeros" />
 
             <ImageButton
@@ -374,7 +373,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewFamilia"
-                app:srcCompat="@drawable/emociones" />
+                app:srcCompat="@drawable/objetos" />
 
             <ImageButton
                 android:id="@+id/imageButtonPronombres"
@@ -413,7 +412,7 @@
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewPronombres"
-                app:srcCompat="@drawable/emociones" />
+                app:srcCompat="@drawable/verbos" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

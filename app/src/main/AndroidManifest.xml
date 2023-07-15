@@ -12,6 +12,39 @@
         android:theme="@style/Theme.Mixtico"
         tools:targetApi="31">
         <activity
+            android:name=".FamiliaP5"
+            android:exported="false" />
+        <activity
+            android:name=".FamiliaP4"
+            android:exported="false" />
+        <activity
+            android:name=".FamiliaP3"
+            android:exported="false" />
+        <activity
+            android:name=".FamiliaP2"
+            android:exported="false" />
+        <activity
+            android:name=".FamiliaP1"
+            android:exported="false" />
+        <activity
+            android:name=".CuerpoP5"
+            android:exported="false" />
+        <activity
+            android:name=".CuerpoP4"
+            android:exported="false" />
+        <activity
+            android:name=".CuerpoP3"
+            android:exported="false" />
+        <activity
+            android:name=".CuerpoP2"
+            android:exported="false" />
+        <activity
+            android:name=".CuerpoP1"
+            android:exported="false" />
+        <activity
+            android:name=".CuerpoLP"
+            android:exported="false" />
+        <activity
             android:name=".FamiliaLP"
             android:exported="false" />
         <activity
@@ -27,7 +60,7 @@
             android:name=".AnimalesP5"
             android:exported="false" />
         <activity
-            android:name=".AbecedarioLP"
+            android:name=".AdverbiosLP"
             android:exported="false" />
         <activity
             android:name=".AnimalesP1"
