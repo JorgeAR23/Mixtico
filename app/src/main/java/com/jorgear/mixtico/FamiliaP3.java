@@ -54,7 +54,7 @@ public class FamiliaP3 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb3.isChecked()) {
+        if(rb1.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -86,7 +86,7 @@ public class FamiliaP3 extends AppCompatActivity {
             new Handler().postDelayed(this::P4, 2000);
 
         }
-        else if(rb1.isChecked()) {
+        else if(rb3.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {

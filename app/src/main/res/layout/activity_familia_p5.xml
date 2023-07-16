@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿Cual de los siguientes incisos es la palabra correcta de boca en Mixteco?"
+        android:text="La palabra papá en Mixteco es ivá ¿Es correcto?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Ixí yuꞌú"
+            android:text="Sí"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -99,30 +99,7 @@
             android:background="@drawable/custom_radio_button"
             android:button="@null"
             android:fontFamily="sans-serif-black"
-            android:text="Nu̠ǔ"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/custom_radio_button"
-            android:button="@null"
-            android:fontFamily="sans-serif-black"
-            android:text="Yuꞌú"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_radio_button"
-            android:button="@null"
-            android:fontFamily="sans-serif-black"
-            android:text="Xi̠kuǎ"
+            android:text="No"
             android:textAlignment="center"
             android:textSize="24sp" />
     </RadioGroup>

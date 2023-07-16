@@ -35,8 +35,6 @@ public class FamiliaP4 extends AppCompatActivity {
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
         rb2 = findViewById(R.id.radioButton2);
-        rb3 = findViewById(R.id.radioButton3);
-        rb4 = findViewById(R.id.radioButton4);
         correctoimg = findViewById(R.id.correcto);
         incorrectoimg = findViewById(R.id.incorrecto);
         correctotxt = findViewById(R.id.respuestaCorrecta);
@@ -54,7 +52,7 @@ public class FamiliaP4 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb3.isChecked()) {
+        if(rb1.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -86,7 +84,7 @@ public class FamiliaP4 extends AppCompatActivity {
             new Handler().postDelayed(this::P5, 2000);
 
         }
-        else if(rb1.isChecked()) {
+        else if(rb3.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {

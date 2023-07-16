@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
         int aciertosColor = aciertoColor1 + aciertoColor2 + aciertoColor3 + aciertoColor4 + aciertoColor5;
         String aciertosColorString = String.valueOf(aciertosColor);
         tvColores.setText(aciertosColorString + "/5 Aciertos");
-        if(aciertosColorString.equals("5"))  {
-            tvColores.setTextColor(getResources().getColor(R.color.green));
-        }
 
         // Obtione la referencia al BottomNavigationView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
