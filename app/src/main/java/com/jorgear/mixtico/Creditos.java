@@ -27,22 +27,20 @@ public class Creditos extends AppCompatActivity {
             int itemId = item.getItemId();
 
             // Realiza acciones según el elemento seleccionado
-            switch (itemId) {
-                case R.id.placeholder:
+            if (itemId == R.id.placeholder) {
                     //Metodo para ir a Inicio
                     Intent inicio = new Intent(this, MainActivity.class);
                     startActivity(inicio);
-                    break;
-
-                case R.id.info:
-                    // Metodo para Salir
+                    return true;
+            } else if (itemId == R.id.info) {
+                    // Metodo para ir a Info
                     Intent info = new Intent(this, Info.class);
                     startActivity(info);
-                    break;
+                    return true;
             }
 
-            // Devuelve true para indicar que el evento ha sido manejado correctamente
-            return true;
+            // Devuelve false si no se ha manejado correctamente el evento
+            return false;
         });
     }
 

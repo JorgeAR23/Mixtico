@@ -72,7 +72,7 @@ public class ColoresP2 extends AppCompatActivity {
             new Handler().postDelayed(this::p3, 2000);
 
         }
-        else if(rb2.isChecked()) {
+        else {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -81,32 +81,11 @@ public class ColoresP2 extends AppCompatActivity {
             sonidoI.start();
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
-            // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p3, 2000);
 
-        }
-        else if(rb1.isChecked()) {
-            incorrectoimg.setVisibility(View.VISIBLE);
-            incorrectotxt.setVisibility(View.VISIBLE);
-            for (int i = 0; i < radiog.getChildCount(); i++) {
-                radiog.getChildAt(i).setEnabled(false);
-            }
-            sonidoI.start();
-            button1.setBackgroundColor(getResources().getColor(R.color.red));
-            button1.setEnabled(false);
-            // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p3, 2000);
+            //Manda el dato al MainActivity
+            editor.putInt("aciertoColor2", 0);
+            editor.apply();
 
-        }
-        else if(rb4.isChecked()) {
-            incorrectoimg.setVisibility(View.VISIBLE);
-            incorrectotxt.setVisibility(View.VISIBLE);
-            for (int i = 0; i < radiog.getChildCount(); i++) {
-                radiog.getChildAt(i).setEnabled(false);
-            }
-            sonidoI.start();
-            button1.setBackgroundColor(getResources().getColor(R.color.red));
-            button1.setEnabled(false);
             // Llama al método para ir a la siguiente actividad después del retraso
             new Handler().postDelayed(this::p3, 2000);
 
