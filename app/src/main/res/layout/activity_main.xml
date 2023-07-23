@@ -291,6 +291,7 @@
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
                 app:layout_constraintHorizontal_bias="0.0"
+                android:onClick="Animo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewAdverbios"
                 app:srcCompat="@drawable/animo" />

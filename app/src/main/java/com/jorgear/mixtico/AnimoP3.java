@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class AnimalesP1 extends AppCompatActivity {
+public class AnimoP3 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
@@ -30,7 +30,7 @@ public class AnimalesP1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_p1);
+        setContentView(R.layout.activity_animo_p3);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
@@ -54,7 +54,7 @@ public class AnimalesP1 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb3.isChecked()) {
+        if(rb1.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -66,11 +66,11 @@ public class AnimalesP1 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal1", 1);
+            editor.putInt("aciertoAnimo3", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::P2, 2000);
+            new Handler().postDelayed(this::P4, 2000);
 
         }
         else {
@@ -84,11 +84,11 @@ public class AnimalesP1 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal1", 0);
+            editor.putInt("aciertoAnimo3", 0);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::P2, 2000);
+            new Handler().postDelayed(this::P4, 2000);
         }
     }
 
@@ -114,9 +114,9 @@ public class AnimalesP1 extends AppCompatActivity {
     }
 
     //Metodo para ir a la siguiente pregunta
-    public void P2(){
-        Intent p2 = new Intent(this, AnimalesP2.class);
-        startActivity(p2);
+    public void P4(){
+        Intent p4 = new Intent(this, AnimoP4.class);
+        startActivity(p4);
     }
 
     //Metodo para salir a Inicio
@@ -124,6 +124,7 @@ public class AnimalesP1 extends AppCompatActivity {
         Intent salir = new Intent(this, MainActivity.class);
         startActivity(salir);
     }
+
 
     //Metodo para el boton regresar a Inicio
     public void SalirBoton(View view){

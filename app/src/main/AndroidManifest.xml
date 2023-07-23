@@ -12,6 +12,24 @@
         android:theme="@style/Theme.Mixtico"
         tools:targetApi="31">
         <activity
+            android:name=".AnimoP5"
+            android:exported="false" />
+        <activity
+            android:name=".AnimoP4"
+            android:exported="false" />
+        <activity
+            android:name=".AnimoP3"
+            android:exported="false" />
+        <activity
+            android:name=".AnimoP2"
+            android:exported="false" />
+        <activity
+            android:name=".AnimoP1"
+            android:exported="false" />
+        <activity
+            android:name=".AnimoLP"
+            android:exported="false" />
+        <activity
             android:name=".FamiliaP5"
             android:exported="false" />
         <activity

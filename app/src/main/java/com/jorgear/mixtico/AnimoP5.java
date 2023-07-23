@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class AnimalesP1 extends AppCompatActivity {
+public class AnimoP5 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
@@ -30,13 +30,11 @@ public class AnimalesP1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_p1);
+        setContentView(R.layout.activity_animo_p5);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
         rb2 = findViewById(R.id.radioButton2);
-        rb3 = findViewById(R.id.radioButton3);
-        rb4 = findViewById(R.id.radioButton4);
         correctoimg = findViewById(R.id.correcto);
         incorrectoimg = findViewById(R.id.incorrecto);
         correctotxt = findViewById(R.id.respuestaCorrecta);
@@ -54,7 +52,7 @@ public class AnimalesP1 extends AppCompatActivity {
 
     //Metodo para el boton verificar respuesta
     public void Respuesta(View view) {
-        if(rb3.isChecked()) {
+        if(rb1.isChecked()) {
             correctoimg.setVisibility(View.VISIBLE);
             correctotxt.setVisibility(View.VISIBLE);
             // Deshabilitar todas las opciones del RadioGroup
@@ -66,11 +64,11 @@ public class AnimalesP1 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal1", 1);
+            editor.putInt("aciertoAnimo5", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::P2, 2000);
+            new Handler().postDelayed(this::Salir, 2000);
 
         }
         else {
@@ -84,11 +82,11 @@ public class AnimalesP1 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal1", 0);
+            editor.putInt("aciertoAnimo5", 0);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::P2, 2000);
+            new Handler().postDelayed(this::Salir, 2000);
         }
     }
 
@@ -113,17 +111,13 @@ public class AnimalesP1 extends AppCompatActivity {
         dialog.show();
     }
 
-    //Metodo para ir a la siguiente pregunta
-    public void P2(){
-        Intent p2 = new Intent(this, AnimalesP2.class);
-        startActivity(p2);
-    }
 
     //Metodo para salir a Inicio
     public void Salir() {
         Intent salir = new Intent(this, MainActivity.class);
         startActivity(salir);
     }
+
 
     //Metodo para el boton regresar a Inicio
     public void SalirBoton(View view){

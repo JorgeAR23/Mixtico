@@ -14,7 +14,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
 
-    private SharedPreferences sharedPreferencesCO;
     SharedPreferences.Editor editor;
 
     private ImageButton btnModoClaro, btnModoOscuro;
@@ -32,21 +31,19 @@ public class MainActivity extends AppCompatActivity {
         btnModoClaro = findViewById(R.id.imageButtonDay);
         btnModoOscuro = findViewById(R.id.imageButtonNight);
 
-        sharedPreferencesCO = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferencesCO = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         editor = sharedPreferencesCO.edit();
         int modoCO = sharedPreferencesCO.getInt("modoCO", 0);
         if (modoCO == 1){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             btnModoClaro.setEnabled(false);
             btnModoOscuro.setEnabled(true);
         } else if (modoCO == 2) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             btnModoClaro.setEnabled(true);
             btnModoOscuro.setEnabled(false);
         }
 
-        tvAnimales = findViewById(R.id.textViewAnimales);
         SharedPreferences sharedPreferencesAciertos = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        tvAnimales = findViewById(R.id.textViewAnimales);
         int aciertoAnimal1 = sharedPreferencesAciertos.getInt("aciertoAnimal1", 0);
         int aciertoAnimal2 = sharedPreferencesAciertos.getInt("aciertoAnimal2", 0);
         int aciertoAnimal3 = sharedPreferencesAciertos.getInt("aciertoAnimal3", 0);
@@ -65,15 +62,33 @@ public class MainActivity extends AppCompatActivity {
             tvAnimales.setText(aciertosFinAnimalString + "/5 Aciertos");
         }
 
+        tvAnimo = findViewById(R.id.textViewAnimo);
+        int aciertoAnimo1 = sharedPreferencesAciertos.getInt("aciertoAnimo1", 0);
+        int aciertoAnimo2 = sharedPreferencesAciertos.getInt("aciertoAnimo2", 0);
+        int aciertoAnimo3 = sharedPreferencesAciertos.getInt("aciertoAnimo3", 0);
+        int aciertoAnimo4 = sharedPreferencesAciertos.getInt("aciertoAnimo4", 0);
+        int aciertoAnimo5 = sharedPreferencesAciertos.getInt("aciertoAnimo5", 0);
+        int aciertosAnimo = aciertoAnimo1 + aciertoAnimo2 + aciertoAnimo3 + aciertoAnimo4 + aciertoAnimo5;
+        int aciertosFinAnimo = sharedPreferencesAciertos.getInt("aciertosFinAnimo", 0);
+        if (aciertosAnimo > aciertosFinAnimo){
+            editor.putInt("aciertosFinAnimo", aciertosAnimo);
+            editor.apply();
+            String aciertosAnimoString = String.valueOf(aciertosAnimo);
+            tvAnimo.setText(aciertosAnimoString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinAnimoString = String.valueOf(aciertosFinAnimo);
+            tvAnimo.setText(aciertosFinAnimoString + "/5 Aciertos");
+        }
+
         tvColores = findViewById(R.id.textViewColores);
-        SharedPreferences sharedPreferencesColor = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
-        int aciertoColor1 = sharedPreferencesColor.getInt("aciertoColor1", 0);
-        int aciertoColor2 = sharedPreferencesColor.getInt("aciertoColor2", 0);
-        int aciertoColor3 = sharedPreferencesColor.getInt("aciertoColor3", 0);
-        int aciertoColor4 = sharedPreferencesColor.getInt("aciertoColor4", 0);
-        int aciertoColor5 = sharedPreferencesColor.getInt("aciertoColor5", 0);
+        int aciertoColor1 = sharedPreferencesAciertos.getInt("aciertoColor1", 0);
+        int aciertoColor2 = sharedPreferencesAciertos.getInt("aciertoColor2", 0);
+        int aciertoColor3 = sharedPreferencesAciertos.getInt("aciertoColor3", 0);
+        int aciertoColor4 = sharedPreferencesAciertos.getInt("aciertoColor4", 0);
+        int aciertoColor5 = sharedPreferencesAciertos.getInt("aciertoColor5", 0);
         int aciertosColor = aciertoColor1 + aciertoColor2 + aciertoColor3 + aciertoColor4 + aciertoColor5;
-        int aciertosFinColor = sharedPreferencesColor.getInt("aciertosFinColor", 0);
+        int aciertosFinColor = sharedPreferencesAciertos.getInt("aciertosFinColor", 0);
         if (aciertosColor > aciertosFinColor){
             editor.putInt("aciertosFinColor", aciertosColor);
             editor.apply();
@@ -86,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         tvCuerpo = findViewById(R.id.textViewCuerpo);
-        SharedPreferences sharedPreferencesCuerpo = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         int aciertoCuerpo1 = sharedPreferencesAciertos.getInt("aciertoCuerpo1", 0);
         int aciertoCuerpo2 = sharedPreferencesAciertos.getInt("aciertoCuerpo2", 0);
         int aciertoCuerpo3 = sharedPreferencesAciertos.getInt("aciertoCuerpo3", 0);
@@ -178,16 +192,18 @@ public class MainActivity extends AppCompatActivity {
         establecerTemaOscuro();
     }
 
-    //Metodo para ir a AnimalesLP
-    public void Adverbios(View view){
-        Intent adverbios = new Intent(this, AdverbiosLP.class);
-        startActivity(adverbios);
-    }
+
 
     //Metodo para ir a AnimalesLP
     public void Animales(View view){
         Intent animales = new Intent(this, AnimalesLP.class);
         startActivity(animales);
+    }
+
+    //Metodo para ir a AnimoLP
+    public void Animo(View view){
+        Intent animo = new Intent(this, AnimoLP.class);
+        startActivity(animo);
     }
 
     //Metodo para ir a ColoresLP
@@ -208,11 +224,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(familia);
     }
 
-    //Metodo para ir a PronombresLP
-    public void Pronombres(View view){
-        Intent pronombres = new Intent(this, PronombresLP.class);
-        startActivity(pronombres);
-    }
+
 
     //Metodo para la accion al presionar el boton del sistema "Regresar"
     public void onBackPressed() {

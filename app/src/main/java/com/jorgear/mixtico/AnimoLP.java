@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AnimalesLP extends AppCompatActivity {
+public class AnimoLP extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_lp);
+        setContentView(R.layout.activity_animo_lp);
     }
 
     //Metodo para regresar a Inicio
@@ -22,11 +22,10 @@ public class AnimalesLP extends AppCompatActivity {
 
     //Metodo para ir a Prueba
     public void Prueba(View view){
-        Intent prueba = new Intent(this, AnimalesP1.class);
+        Intent prueba = new Intent(this, AnimoP1.class);
         startActivity(prueba);
     }
 
-    //Metodo para reproducir la pronunciacion
     public void Gato(View view){
     }
 }

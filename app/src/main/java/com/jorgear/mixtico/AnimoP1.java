@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class AnimalesP1 extends AppCompatActivity {
+public class AnimoP1 extends AppCompatActivity {
 
     RadioGroup radiog;
     RadioButton rb1, rb2, rb3, rb4;
@@ -30,7 +30,7 @@ public class AnimalesP1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animales_p1);
+        setContentView(R.layout.activity_animo_p1);
 
         radiog = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
@@ -66,7 +66,7 @@ public class AnimalesP1 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal1", 1);
+            editor.putInt("aciertoAnimo1", 1);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
@@ -84,7 +84,7 @@ public class AnimalesP1 extends AppCompatActivity {
             button1.setEnabled(false);
 
             //Manda el dato al MainActivity
-            editor.putInt("aciertoAnimal1", 0);
+            editor.putInt("aciertoAnimo1", 0);
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
@@ -115,7 +115,7 @@ public class AnimalesP1 extends AppCompatActivity {
 
     //Metodo para ir a la siguiente pregunta
     public void P2(){
-        Intent p2 = new Intent(this, AnimalesP2.class);
+        Intent p2 = new Intent(this, AnimoP2.class);
         startActivity(p2);
     }
 
@@ -124,6 +124,7 @@ public class AnimalesP1 extends AppCompatActivity {
         Intent salir = new Intent(this, MainActivity.class);
         startActivity(salir);
     }
+
 
     //Metodo para el boton regresar a Inicio
     public void SalirBoton(View view){
