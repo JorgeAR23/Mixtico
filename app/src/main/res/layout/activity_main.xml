@@ -185,7 +185,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonNumeros" />
 
             <TextView
-                android:id="@+id/textViewObjetos"
+                android:id="@+id/textViewPronombres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
@@ -197,10 +197,10 @@
                 android:textSize="20sp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonObjetos" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonPronombres" />
 
             <TextView
-                android:id="@+id/textViewPronombres"
+                android:id="@+id/textViewSaludos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -210,10 +210,10 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonPronombres" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSaludos" />
 
             <TextView
-                android:id="@+id/textViewSaludos"
+                android:id="@+id/textViewSustantivos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
@@ -225,7 +225,7 @@
                 android:textSize="20sp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonSaludos" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSustantivos" />
 
             <TextView
                 android:id="@+id/textViewVerbos"
@@ -263,7 +263,6 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                android:onClick="Adverbios"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo"
                 app:srcCompat="@drawable/adverbios" />
@@ -304,7 +303,6 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                android:onClick="Colores"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewAnimales"
                 app:srcCompat="@drawable/calendario" />
@@ -358,12 +356,13 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
+                android:onClick="Numeros"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCuerpo"
                 app:srcCompat="@drawable/numeros" />
 
             <ImageButton
-                android:id="@+id/imageButtonObjetos"
+                android:id="@+id/imageButtonPronombres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -374,34 +373,32 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewFamilia"
-                app:srcCompat="@drawable/objetos" />
-
-            <ImageButton
-                android:id="@+id/imageButtonPronombres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/rounded_button"
-                android:contentDescription="@string/descripciones"
-                android:onClick="Pronombres"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewNumeros"
                 app:srcCompat="@drawable/pronombres" />
 
             <ImageButton
                 android:id="@+id/imageButtonSaludos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:layout_marginTop="28dp"
-                android:layout_marginEnd="34dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/descripciones"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewObjetos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNumeros"
                 app:srcCompat="@drawable/saludos" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSustantivos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/descripciones"
+                android:onClick="Sustantivos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPronombres"
+                app:srcCompat="@drawable/sustantivos" />
 
             <ImageButton
                 android:id="@+id/imageButtonVerbos"

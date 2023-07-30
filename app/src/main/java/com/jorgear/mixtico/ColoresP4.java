@@ -67,10 +67,10 @@ public class ColoresP4 extends AppCompatActivity {
             editor.apply();
 
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p5, 2000);
+            new Handler().postDelayed(this::P5, 2000);
 
         }
-        else {
+        else if(rb2.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -79,14 +79,43 @@ public class ColoresP4 extends AppCompatActivity {
             sonidoI.start();
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
-
             //Manda el dato al MainActivity
             editor.putInt("aciertoColor4", 0);
             editor.apply();
-
             // Llama al método para ir a la siguiente actividad después del retraso
-            new Handler().postDelayed(this::p5, 2000);
+            new Handler().postDelayed(this::P5, 2000);
 
+        }
+        else if(rb3.isChecked()) {
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
+            for (int i = 0; i < radiog.getChildCount(); i++) {
+                radiog.getChildAt(i).setEnabled(false);
+            }
+            sonidoI.start();
+            button1.setBackgroundColor(getResources().getColor(R.color.red));
+            button1.setEnabled(false);
+            //Manda el dato al MainActivity
+            editor.putInt("aciertoColor4", 0);
+            editor.apply();
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::P5, 2000);
+
+        }
+        else if(rb4.isChecked()) {
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
+            for (int i = 0; i < radiog.getChildCount(); i++) {
+                radiog.getChildAt(i).setEnabled(false);
+            }
+            sonidoI.start();
+            button1.setBackgroundColor(getResources().getColor(R.color.red));
+            button1.setEnabled(false);
+            //Manda el dato al MainActivity
+            editor.putInt("aciertoColor4", 0);
+            editor.apply();
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::P5, 2000);
         }
     }
 
@@ -112,7 +141,7 @@ public class ColoresP4 extends AppCompatActivity {
     }
 
     //Metodo para ir a la siguiente pregunta
-    public void p5(){
+    public void P5(){
         Intent p5 = new Intent(this, ColoresP5.class);
         startActivity(p5);
     }

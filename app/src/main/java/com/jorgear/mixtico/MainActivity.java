@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnModoClaro, btnModoOscuro;
     public BottomNavigationView bottomNavigationView;
     TextView tvAdverbios, tvAnimales, tvAnimo, tvCalendario, tvColores, tvCuerpo, tvFamilia,
-             tvNumeros, tvObjetos, tvPronombres, tvSaludos, tvVerbos;
+             tvNumeros, tvSustantivos, tvPronombres, tvSaludos, tvVerbos;
 
 
 
@@ -138,6 +138,45 @@ public class MainActivity extends AppCompatActivity {
             tvFamilia.setText(aciertosFinFamiliaString + "/5 Aciertos");
         }
 
+        tvNumeros = findViewById(R.id.textViewNumeros);
+        int aciertoNumero1 = sharedPreferencesAciertos.getInt("aciertoNumero1", 0);
+        int aciertoNumero2 = sharedPreferencesAciertos.getInt("aciertoNumero2", 0);
+        int aciertoNumero3 = sharedPreferencesAciertos.getInt("aciertoNumero3", 0);
+        int aciertoNumero4 = sharedPreferencesAciertos.getInt("aciertoNumero4", 0);
+        int aciertoNumero5 = sharedPreferencesAciertos.getInt("aciertoNumero5", 0);
+        int aciertosNumero = aciertoNumero1 + aciertoNumero2 + aciertoNumero3 + aciertoNumero4 + aciertoNumero5;
+        int aciertosFinNumero = sharedPreferencesAciertos.getInt("aciertosFinNumero", 0);
+        if (aciertosNumero > aciertosFinNumero){
+            editor.putInt("aciertosFinNumero", aciertosNumero);
+            editor.apply();
+            String aciertosNumeroString = String.valueOf(aciertosNumero);
+            tvNumeros.setText(aciertosNumeroString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinNumeroString = String.valueOf(aciertosFinNumero);
+            tvNumeros.setText(aciertosFinNumeroString + "/5 Aciertos");
+        }
+
+
+        tvSustantivos = findViewById(R.id.textViewSustantivos);
+        int aciertoSustantivo1 = sharedPreferencesAciertos.getInt("aciertoSustantivo1", 0);
+        int aciertoSustantivo2 = sharedPreferencesAciertos.getInt("aciertoSustantivo2", 0);
+        int aciertoSustantivo3 = sharedPreferencesAciertos.getInt("aciertoSustantivo3", 0);
+        int aciertoSustantivo4 = sharedPreferencesAciertos.getInt("aciertoSustantivo4", 0);
+        int aciertoSustantivo5 = sharedPreferencesAciertos.getInt("aciertoSustantivo5", 0);
+        int aciertosSustantivo = aciertoSustantivo1 + aciertoSustantivo2 + aciertoSustantivo3 + aciertoSustantivo4 + aciertoSustantivo5;
+        int aciertosFinSustantivo = sharedPreferencesAciertos.getInt("aciertosFinSustantivo", 0);
+        if (aciertosSustantivo > aciertosFinSustantivo){
+            editor.putInt("aciertosFinSustantivo", aciertosSustantivo);
+            editor.apply();
+            String aciertosSustantivoString = String.valueOf(aciertosSustantivo);
+            tvSustantivos.setText(aciertosSustantivoString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinSustantivoString = String.valueOf(aciertosFinSustantivo);
+            tvSustantivos.setText(aciertosFinSustantivoString + "/5 Aciertos");
+        }
+
 
 
         // Obtione la referencia al BottomNavigationView
@@ -222,6 +261,18 @@ public class MainActivity extends AppCompatActivity {
     public void Familia(View view){
         Intent familia = new Intent(this, FamiliaLP.class);
         startActivity(familia);
+    }
+
+    //Metodo para ir a NumerosLP
+    public void Numeros(View view){
+        Intent numeros = new Intent(this, NumerosLP.class);
+        startActivity(numeros);
+    }
+
+    //Metodo para ir a SustantivosLP
+    public void Sustantivos(View view){
+        Intent sustantivos = new Intent(this, SustantivosLP.class);
+        startActivity(sustantivos);
     }
 
 

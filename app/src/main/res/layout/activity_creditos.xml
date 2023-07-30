@@ -108,7 +108,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="80dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Asesor:\nM.C. Miguel Angel Garcia Trillo"
+                android:text="Asesor:\nMiguel Angel Garcia Trillo"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -142,6 +142,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewAsesor" />
 
+            <ImageView
+                android:id="@+id/imageViewVoz"
+                android:layout_width="177dp"
+                android:layout_height="132dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVoz"
+                app:srcCompat="@drawable/voz" />
+
             <TextView
                 android:id="@+id/textViewLimite"
                 android:layout_width="wrap_content"
@@ -155,7 +167,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewVoz" />
+                app:layout_constraintTop_toBottomOf="@+id/imageViewVoz" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

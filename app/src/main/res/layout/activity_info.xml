@@ -43,21 +43,50 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
 
+            <ImageView
+                android:id="@+id/imageViewPersonas"
+                android:layout_width="177dp"
+                android:layout_height="132dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineaTitle"
+                app:srcCompat="@drawable/personas" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="299dp"
+                android:layout_width="match_parent"
+                android:justificationMode="inter_word"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="56dp"
+                android:layout_marginEnd="40dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="La lengua mixteca es la tercer lengua indigena mas hablada actualmente en nuestro pais, pero a causa de distintos factores en la sociedad, esta desapareciendo y cada vez hay menos personas hablantes de la misma. \n\nEste ha sido el motivo que nos impulso a crear esta App, mediante la cual la gente podra aprender sobre la lengua mixteca, con el proposito de que se interesen en esta hermosa lengua y practiquen dia a dia para que, en un futuro, puedan inclusive entablar conversaciones con hablantes nativos de la misma. "
-                android:textAlignment="center"
+                android:text="El mixteco, conocido tambien como tu'un savi, lengua de la lluvia, es un conjunto de variedades lingüisticas que se hablan principalmente en los estados de Guerrero, Oaxaca y Puebla. En el Censo de Población y Vivienda del INEGI 2010 se registraron 496,038 hablantes de alguna variedad de mixteco. De todas las agrupaciones lingüísticas es la que conjunta el mayor número de variantes, 81 en total.
+                \n\nEsta app fue desarrollada teniendo como referencia principal la variedad hablada en el municipio de Metlatonoc, por lo que las palabras mostradas pueden ser diferentes a como se escriben y pronuncian en otras regiones.
+                \n\nLa razon de existir de esta aplicacion, es la necesidad que existe en nuestro pais de preserver y promover la lengua mixteca, ya que esta es una parte importante del patrimonio cultural de Mexico y sin embargo corre el riesto de desaparecer debido a varios factores.
+                \n\nEste ha sido el motivo que nos impulso a crearla, con el objetivo de que al conocer mas sobre esta, despierte un interes en esta hermosa lengua y practiquen dia a dia para que, en un futuro, puedan inclusive entablar conversaciones con hablantes nativos de la misma. "
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPersonas" />
+
+            <TextView
+                android:id="@+id/textViewLimite"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="80dp"
+                android:fontFamily="sans-serif-medium"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

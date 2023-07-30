@@ -3,15 +3,19 @@ package com.jorgear.mixtico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 
 public class AnimalesLP extends AppCompatActivity {
 
+    MediaPlayer vGato;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animales_lp);
+
+        vGato = MediaPlayer.create(this, R.raw.vgato);
     }
 
     //Metodo para regresar a Inicio
@@ -28,5 +32,6 @@ public class AnimalesLP extends AppCompatActivity {
 
     //Metodo para reproducir la pronunciacion
     public void Gato(View view){
+        vGato.start();
     }
 }

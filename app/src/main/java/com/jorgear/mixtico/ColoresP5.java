@@ -73,7 +73,7 @@ public class ColoresP5 extends AppCompatActivity {
             new Handler().postDelayed(this::Salir, 2000);
 
         }
-        else {
+        else if(rb2.isChecked()) {
             incorrectoimg.setVisibility(View.VISIBLE);
             incorrectotxt.setVisibility(View.VISIBLE);
             for (int i = 0; i < radiog.getChildCount(); i++) {
@@ -82,14 +82,43 @@ public class ColoresP5 extends AppCompatActivity {
             sonidoI.start();
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
-
             //Manda el dato al MainActivity
             editor.putInt("aciertoColor5", 0);
             editor.apply();
-
             // Llama al método para ir a la siguiente actividad después del retraso
             new Handler().postDelayed(this::Salir, 2000);
 
+        }
+        else if(rb3.isChecked()) {
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
+            for (int i = 0; i < radiog.getChildCount(); i++) {
+                radiog.getChildAt(i).setEnabled(false);
+            }
+            sonidoI.start();
+            button1.setBackgroundColor(getResources().getColor(R.color.red));
+            button1.setEnabled(false);
+            //Manda el dato al MainActivity
+            editor.putInt("aciertoColor5", 0);
+            editor.apply();
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::Salir, 2000);
+
+        }
+        else if(rb1.isChecked()) {
+            incorrectoimg.setVisibility(View.VISIBLE);
+            incorrectotxt.setVisibility(View.VISIBLE);
+            for (int i = 0; i < radiog.getChildCount(); i++) {
+                radiog.getChildAt(i).setEnabled(false);
+            }
+            sonidoI.start();
+            button1.setBackgroundColor(getResources().getColor(R.color.red));
+            button1.setEnabled(false);
+            //Manda el dato al MainActivity
+            editor.putInt("aciertoColor5", 0);
+            editor.apply();
+            // Llama al método para ir a la siguiente actividad después del retraso
+            new Handler().postDelayed(this::Salir, 2000);
         }
     }
 
