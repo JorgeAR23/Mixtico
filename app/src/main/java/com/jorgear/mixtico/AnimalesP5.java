@@ -46,7 +46,7 @@ public class AnimalesP5 extends AppCompatActivity {
         editText.setKeyListener(null);
         sonidoC = MediaPlayer.create(this, R.raw.sonido_correcto);
         sonidoI = MediaPlayer.create(this, R.raw.sonido_incorrecto);
-        vozPregunta = MediaPlayer.create(this, R.raw.sonido_incorrecto);
+        vozPregunta = MediaPlayer.create(this, R.raw.vserpiente);
         sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }

@@ -76,9 +76,9 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
-            android:onClick="Gato"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/abuela" />
 
         <ImageButton
@@ -91,6 +91,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/abuelo" />
 
         <ImageButton
@@ -105,6 +106,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonAbuela"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/bebe" />
 
         <ImageButton
@@ -117,6 +119,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonAbuelo"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/bisabuelo" />
 
         <ImageButton
@@ -131,6 +134,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonBebe"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/compadre" />
 
         <ImageButton
@@ -143,6 +147,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonBisabuelo"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/cu_ada" />
 
         <ImageButton
@@ -157,6 +162,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonCompadre"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/cu_ado" />
 
         <ImageButton
@@ -169,6 +175,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonCuñada"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/esposa" />
 
         <ImageButton
@@ -183,6 +190,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonCuñado"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/esposo" />
 
         <ImageButton
@@ -195,6 +203,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonEsposa"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/hermanah" />
 
         <ImageButton
@@ -209,6 +218,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonEsposo"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/hermanam" />
 
         <ImageButton
@@ -221,6 +231,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanaH"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/hermanoh" />
 
         <ImageButton
@@ -235,6 +246,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanaM"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/hermanom" />
 
         <ImageButton
@@ -247,6 +259,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanoH"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/hijo" />
 
         <ImageButton
@@ -261,6 +274,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonHermanoM"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/mama" />
 
         <ImageButton
@@ -273,6 +287,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonHijo"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/nieto" />
 
         <ImageButton
@@ -287,6 +302,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonMama"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/padrastro" />
 
         <ImageButton
@@ -299,6 +315,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonNieto"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/padrino" />
 
         <ImageButton
@@ -313,6 +330,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPadrastro"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/papa" />
 
         <ImageButton
@@ -325,6 +343,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPadrino"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/pariente" />
 
         <ImageButton
@@ -339,6 +358,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPapa"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/primah" />
 
         <ImageButton
@@ -351,6 +371,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPariente"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/primam" />
 
         <ImageButton
@@ -365,6 +386,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimaH"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/primoh" />
 
         <ImageButton
@@ -377,6 +399,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimaM"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/primom" />
 
         <ImageButton
@@ -391,6 +414,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimoH"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/sobrina" />
 
         <ImageButton
@@ -403,6 +427,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonPrimoM"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/sobrino" />
 
         <ImageButton
@@ -417,6 +442,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonSobrina"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/tia" />
 
         <ImageButton
@@ -429,6 +455,7 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtonSobrino"
+            android:onClick="reproducirSonido"
             app:srcCompat="@drawable/tio" />
 
         <TextView
