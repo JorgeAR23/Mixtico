@@ -12,23 +12,47 @@
         android:theme="@style/Theme.Mixtico"
         tools:targetApi="31">
         <activity
-            android:name=".NumerosP5"
+            android:name=".VerbosP5"
             android:exported="false" />
+        <activity
+            android:name=".VerbosP4"
+            android:exported="false" />
+        <activity
+            android:name=".VerbosP3"
+            android:exported="false" />
+        <activity
+            android:name=".VerbosP2"
+            android:exported="false" />
+        <activity
+            android:name=".VerbosP1"
+            android:exported="false" />
+        <activity
+            android:name=".VerbosLP"
+            android:exported="false" />
+        <activity
+            android:name=".NumerosP5"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".NumerosP4"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".NumerosP3"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".NumerosP2"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".NumerosP1"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".NumerosLP"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SustantivosP5"
             android:exported="false"

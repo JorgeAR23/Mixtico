@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/descripciones">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".VerbosLP">
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="137dp"
+            android:fontFamily="sans-serif-black"
+            android:text="VERBOS"
+            android:textAlignment="center"
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Comenzar\nPrueba"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPrueba" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPrueba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:background="#00000000"
+            android:contentDescription="Boton Prueba"
+            android:onClick="Prueba"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/test" />
+
+        <ImageButton
+            android:id="@+id/regresarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:background="#00000000"
+            android:contentDescription="Boton Regresar"
+            android:onClick="Inicio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrowback" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAbrir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/abrir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAcostarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/acostarse" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAdorar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAbrir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/adorar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAplaudir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAcostarse"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/aplaudir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonArreglar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAdorar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/arreglar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAsustar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAplaudir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/asustar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAtacar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonArreglar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/atacar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAyudar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAsustar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/ayudar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBailar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAtacar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/bailar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBarrer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAyudar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/barrer" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBeber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBailar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/beber" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBrincar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBarrer"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/brincar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCaminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBeber"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/caminar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCantar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBrincar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cantar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCasar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCaminar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/casar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCelebrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCantar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/celebrar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCerrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCasar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cerrar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonComer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCelebrar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/comer" />
+
+        <ImageButton
+            android:id="@+id/imageButtonComprar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCerrar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/comprar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonConstruir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonComer"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/construir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonConvivir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonComprar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/convivir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCopiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonConstruir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/copiar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCorrer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonConvivir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/correr" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCortar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCopiar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cortar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDestruir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCorrer"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/destruir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDibujar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCortar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/dibujar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDestruir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/dividir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDormir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDibujar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/dormir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonEmborrachar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDividir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/emborrachar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonEnseñar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDormir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/ensenar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonEscribir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEmborrachar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/escribir" />
+
+        <ImageButton
+            android:id="@+id/imageButtonEscuchar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEnseñar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/escuchar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGanar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEscribir"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/ganar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGolpear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEscuchar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/golpear" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGritar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonGanar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/gritar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonHablar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonGolpear"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/hablar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLlamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonGritar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/llamar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLlorar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHablar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/llorar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonManejar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonLlamar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/manejar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonLlorar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/matar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonManejar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/morder" />
+
+        <ImageButton
+            android:id="@+id/imageButtonNadar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMatar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/nadar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPensar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMorder"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/pensar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonQuemar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonNadar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/quemar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonRegalar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPensar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/regalar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSaludar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonQuemar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/saludar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTirar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonRegalar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/tirar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTocar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonSaludar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/tocar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTrabajar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonTirar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/trabajar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonVolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonTocar"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/volar" />
+
+        <TextView
+            android:id="@+id/textViewAviso"
+            android:layout_width="330dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Presiona para escuchar la pronunciación de las palabras"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonVolar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -10,54 +10,10 @@ import android.view.View;
 
 public class CuerpoLP extends AppCompatActivity {
 
-    MediaPlayer barba, bigote, boca, cabello, cabeza, cara, ceja, cerebro, codo, corazon, cuello, diente,
-                espalda, estomago, frente, garganta, hombro, hueso, labio, lengua, mano, menton, mejilla,
-                muslo, nalga, nariz, ojo, ombligo, oreja, pecho, pestana, pie, piel, pierna, pulmon, rodilla,
-                una, vello;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuerpo_lp);
-
-        barba = MediaPlayer.create(this, R.raw.vbarba);
-        bigote = MediaPlayer.create(this, R.raw.vbigote);
-        boca = MediaPlayer.create(this, R.raw.vboca);
-        cabello = MediaPlayer.create(this, R.raw.vcabello);
-        cabeza = MediaPlayer.create(this, R.raw.vcabeza);
-        cara = MediaPlayer.create(this, R.raw.vcara);
-        ceja = MediaPlayer.create(this, R.raw.vceja);
-        cerebro = MediaPlayer.create(this, R.raw.vcerebro);
-        codo = MediaPlayer.create(this, R.raw.vcodo);
-        corazon = MediaPlayer.create(this, R.raw.vcorazon);
-        cuello = MediaPlayer.create(this, R.raw.vcuello);
-        diente = MediaPlayer.create(this, R.raw.vdiente);
-        espalda = MediaPlayer.create(this, R.raw.vespalda);
-        estomago = MediaPlayer.create(this, R.raw.vestomago);
-        frente = MediaPlayer.create(this, R.raw.vfrente);
-        garganta = MediaPlayer.create(this, R.raw.vgarganta);
-        hombro = MediaPlayer.create(this, R.raw.vhombro);
-        hueso = MediaPlayer.create(this, R.raw.vhueso);
-        labio = MediaPlayer.create(this, R.raw.vlabio);
-        lengua = MediaPlayer.create(this, R.raw.vlengua);
-        mano = MediaPlayer.create(this, R.raw.vmano);
-        menton = MediaPlayer.create(this, R.raw.vmenton);
-        mejilla = MediaPlayer.create(this, R.raw.vmejilla);
-        muslo = MediaPlayer.create(this, R.raw.vmuslo);
-        nalga = MediaPlayer.create(this, R.raw.vnalga);
-        nariz = MediaPlayer.create(this, R.raw.vnariz);
-        ojo = MediaPlayer.create(this, R.raw.vojo);
-        ombligo = MediaPlayer.create(this, R.raw.vombligo);
-        oreja = MediaPlayer.create(this, R.raw.voreja);
-        pecho = MediaPlayer.create(this, R.raw.vpecho);
-        pestana = MediaPlayer.create(this, R.raw.vpestana);
-        pie = MediaPlayer.create(this, R.raw.vpie);
-        piel = MediaPlayer.create(this, R.raw.vpiel);
-        pierna = MediaPlayer.create(this, R.raw.vpierna);
-        pulmon = MediaPlayer.create(this, R.raw.vpulmon);
-        rodilla = MediaPlayer.create(this, R.raw.vrodilla);
-        una = MediaPlayer.create(this, R.raw.vuna);
-        vello = MediaPlayer.create(this, R.raw.vvello);
 
     }
 
@@ -75,122 +31,130 @@ public class CuerpoLP extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void reproducirSonido(View view) {
+        // Carga el recurso de sonido justo antes de reproducirlo
+        MediaPlayer mediaPlayer = null;
         // Determina qué botón se ha presionado y reproduce el sonido correspondiente
         switch (view.getId()) {
             case R.id.imageButtonBarba:
-                barba.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vbarba);
                 break;
             case R.id.imageButtonBigote:
-                bigote.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vbigote);
                 break;
             case R.id.imageButtonBoca:
-                boca.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vboca);
                 break;
             case R.id.imageButtonCabello:
-                cabello.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcabello);
                 break;
             case R.id.imageButtonCabeza:
-                cabeza.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcabeza);
                 break;
             case R.id.imageButtonCara:
-                cara.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcara);
                 break;
             case R.id.imageButtonCeja:
-                ceja.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vceja);
                 break;
             case R.id.imageButtonCerebro:
-                cerebro.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcerebro);
                 break;
             case R.id.imageButtonCodo:
-                codo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcodo);
                 break;
             case R.id.imageButtonCorazon:
-                corazon.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcorazon);
                 break;
             case R.id.imageButtonCuello:
-                cuello.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcuello);
                 break;
             case R.id.imageButtonDiente:
-                diente.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdiente);
                 break;
             case R.id.imageButtonEspalda:
-                espalda.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vespalda);
                 break;
             case R.id.imageButtonEstomago:
-                estomago.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vestomago);
                 break;
             case R.id.imageButtonFrente:
-                frente.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vfrente);
                 break;
             case R.id.imageButtonGarganta:
-                garganta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vgarganta);
                 break;
             case R.id.imageButtonHombro:
-                hombro.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhombro);
                 break;
             case R.id.imageButtonHueso:
-                hueso.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhueso);
                 break;
             case R.id.imageButtonLabio:
-                labio.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vlabio);
                 break;
             case R.id.imageButtonLengua:
-                lengua.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vlengua);
                 break;
             case R.id.imageButtonMano:
-                mano.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmano);
                 break;
             case R.id.imageButtonMenton:
-                menton.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmenton);
                 break;
             case R.id.imageButtonMejilla:
-                mejilla.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmejilla);
                 break;
             case R.id.imageButtonMuslo:
-                muslo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmuslo);
                 break;
             case R.id.imageButtonNalga:
-                nalga.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vnalga);
                 break;
             case R.id.imageButtonNariz:
-                nariz.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vnariz);
                 break;
             case R.id.imageButtonOjo:
-                ojo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vojo);
                 break;
             case R.id.imageButtonOmbligo:
-                ombligo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vombligo);
                 break;
             case R.id.imageButtonOreja:
-                oreja.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.voreja);
                 break;
             case R.id.imageButtonPecho:
-                pecho.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpecho);
                 break;
             case R.id.imageButtonPestaña:
-                pestana.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpestana);
                 break;
             case R.id.imageButtonPie:
-                pie.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpie);
                 break;
             case R.id.imageButtonPiel:
-                piel.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpiel);
                 break;
             case R.id.imageButtonPierna:
-                pierna.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpierna);
                 break;
             case R.id.imageButtonPulmon:
-                pulmon.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpulmon);
                 break;
             case R.id.imageButtonRodilla:
-                rodilla.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vrodilla);
                 break;
             case R.id.imageButtonUña:
-                una.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vuna);
                 break;
             case R.id.imageButtonVello:
-                vello.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vvello);
                 break;
+        }
+        // Reproduce el sonido si se ha cargado correctamente
+        if (mediaPlayer != null) {
+            // Libera los recursos del MediaPlayer
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+            mediaPlayer.start();
         }
     }
 }

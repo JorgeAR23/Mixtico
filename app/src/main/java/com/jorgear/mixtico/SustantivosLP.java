@@ -10,80 +10,12 @@ import android.view.View;
 
 public class SustantivosLP extends AppCompatActivity {
 
-    MediaPlayer agua, alfiler, algodon, alcohol, aire, arbol, arcoiris, arena, ataud, avion, blusa,
-                bolsa, cama ,calle, camisa, campana, campo, carbon, carta, casa, cielo, clavo, collar,
-                cuerda, documento, edificio, escoba, espejo, falda, flauta, fuego, gas, gorra, hacha, hilo,
-                iglesia, jabon, lago, libro, licor, luna, luz, lluvia, machete, madera, medicina, metal, miel,
-                moneda, olla, pantalon, papel, peine, piedra, plato, puerta, silla, sombrero, tabla, tierra;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sustantivos_lp);
-
-        agua = MediaPlayer.create(this, R.raw.vagua);
-        alfiler = MediaPlayer.create(this, R.raw.valfiler);
-        algodon = MediaPlayer.create(this, R.raw.valgodon);
-        alcohol = MediaPlayer.create(this, R.raw.valcohol);
-        aire = MediaPlayer.create(this, R.raw.vaire);
-        arbol = MediaPlayer.create(this, R.raw.varbol);
-        arcoiris = MediaPlayer.create(this, R.raw.varcoiris);
-        arena = MediaPlayer.create(this, R.raw.varena);
-        ataud = MediaPlayer.create(this, R.raw.vataud);
-        avion = MediaPlayer.create(this, R.raw.vavion);
-        blusa = MediaPlayer.create(this, R.raw.vblusa);
-        bolsa = MediaPlayer.create(this, R.raw.vbolsa);
-        cama = MediaPlayer.create(this, R.raw.vcama);
-        calle = MediaPlayer.create(this, R.raw.vcalle);
-        camisa = MediaPlayer.create(this, R.raw.vcamisa);
-        campana = MediaPlayer.create(this, R.raw.vcampana);
-        campo = MediaPlayer.create(this, R.raw.vcampo);
-        carbon = MediaPlayer.create(this, R.raw.vcarbon);
-        carta = MediaPlayer.create(this, R.raw.vcarta);
-        casa = MediaPlayer.create(this, R.raw.vcasa);
-        cielo = MediaPlayer.create(this, R.raw.vcielo);
-        clavo = MediaPlayer.create(this, R.raw.vclavo);
-        collar = MediaPlayer.create(this, R.raw.vcollar);
-        cuerda = MediaPlayer.create(this, R.raw.vcuerda);
-        documento = MediaPlayer.create(this, R.raw.vdocumento);
-        edificio = MediaPlayer.create(this, R.raw.vedificio);
-        escoba = MediaPlayer.create(this, R.raw.vescoba);
-        espejo = MediaPlayer.create(this, R.raw.vespejo);
-        falda = MediaPlayer.create(this, R.raw.vfalda);
-        flauta = MediaPlayer.create(this, R.raw.vflauta);
-        fuego = MediaPlayer.create(this, R.raw.vfuego);
-        gas = MediaPlayer.create(this, R.raw.vgas);
-        gorra = MediaPlayer.create(this, R.raw.vgorra);
-        hacha = MediaPlayer.create(this, R.raw.vhacha);
-        hilo = MediaPlayer.create(this, R.raw.vhilo);
-        iglesia = MediaPlayer.create(this, R.raw.viglesia);
-        jabon = MediaPlayer.create(this, R.raw.vjabon);
-        lago = MediaPlayer.create(this, R.raw.vlago);
-        libro = MediaPlayer.create(this, R.raw.vlibro);
-        licor = MediaPlayer.create(this, R.raw.vlicor);
-        luna = MediaPlayer.create(this, R.raw.vluna);
-        luz = MediaPlayer.create(this, R.raw.vluz);
-        lluvia = MediaPlayer.create(this, R.raw.vlluvia);
-        machete = MediaPlayer.create(this, R.raw.vmachete);
-        madera = MediaPlayer.create(this, R.raw.vmadera);
-        medicina = MediaPlayer.create(this, R.raw.vmedicina);
-        metal = MediaPlayer.create(this, R.raw.vmetal);
-        miel = MediaPlayer.create(this, R.raw.vmiel);
-        moneda = MediaPlayer.create(this, R.raw.vmoneda);
-        olla = MediaPlayer.create(this, R.raw.volla);
-        pantalon = MediaPlayer.create(this, R.raw.vpantalon);
-        papel = MediaPlayer.create(this, R.raw.vpapel);
-        peine = MediaPlayer.create(this, R.raw.vpeine);
-        piedra = MediaPlayer.create(this, R.raw.vpiedra);
-        plato = MediaPlayer.create(this, R.raw.vplato);
-        puerta = MediaPlayer.create(this, R.raw.vpuerta);
-        silla = MediaPlayer.create(this, R.raw.vsilla);
-        sombrero = MediaPlayer.create(this, R.raw.vsombrero);
-        tabla = MediaPlayer.create(this, R.raw.vtabla);
-        tierra = MediaPlayer.create(this, R.raw.vtierra);
-
-
     }
+
     //Metodo para regresar a Inicio
     public void Inicio(View view){
         Intent inicio = new Intent(this, MainActivity.class);
@@ -98,188 +30,196 @@ public class SustantivosLP extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void reproducirSonido(View view) {
+        // Carga el recurso de sonido justo antes de reproducirlo
+        MediaPlayer mediaPlayer = null;
         // Determina qué botón se ha presionado y reproduce el sonido correspondiente
         switch (view.getId()) {
             case R.id.imageButtonAgua:
-                agua.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vagua);
                 break;
             case R.id.imageButtonAlfiler:
-                alfiler.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.valfiler);
                 break;
             case R.id.imageButtonAlgodon:
-                algodon.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.valgodon);
                 break;
             case R.id.imageButtonAlcohol:
-                alcohol.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.valcohol);
                 break;
             case R.id.imageButtonAire:
-                aire.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vaire);
                 break;
             case R.id.imageButtonArbol:
-                arbol.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.varbol);
                 break;
             case R.id.imageButtonArcoiris:
-                arcoiris.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.varcoiris);
                 break;
             case R.id.imageButtonArena:
-                arena.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.varena);
                 break;
             case R.id.imageButtonAtaud:
-                ataud.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vataud);
                 break;
             case R.id.imageButtonAvion:
-                avion.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vavion);
                 break;
             case R.id.imageButtonBlusa:
-                blusa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vblusa);
                 break;
             case R.id.imageButtonBolsa:
-                bolsa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vbolsa);
                 break;
             case R.id.imageButtonCama:
-                cama.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcama);
                 break;
             case R.id.imageButtonCalle:
-                calle.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcalle);
                 break;
             case R.id.imageButtonCamisa:
-                camisa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcamisa);
                 break;
             case R.id.imageButtonCampana:
-                campana.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcampana);
                 break;
             case R.id.imageButtonCampo:
-                campo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcampo);
                 break;
             case R.id.imageButtonCarbon:
-                carbon.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcarbon);
                 break;
             case R.id.imageButtonCarta:
-                carta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcarta);
                 break;
             case R.id.imageButtonCasa:
-                casa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcasa);
                 break;
             case R.id.imageButtonCielo:
-                cielo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcielo);
                 break;
             case R.id.imageButtonClavo:
-                clavo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vclavo);
                 break;
             case R.id.imageButtonCollar:
-                collar.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcollar);
                 break;
             case R.id.imageButtonCuerda:
-                cuerda.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcuerda);
                 break;
             case R.id.imageButtonDocumento:
-                documento.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdocumento);
                 break;
             case R.id.imageButtonEdificio:
-                edificio.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vedificio);
                 break;
             case R.id.imageButtonEscoba:
-                escoba.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vescoba);
                 break;
             case R.id.imageButtonEspejo:
-                espejo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vespejo);
                 break;
             case R.id.imageButtonFalda:
-                falda.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vfalda);
                 break;
             case R.id.imageButtonFlauta:
-                flauta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vflauta);
                 break;
             case R.id.imageButtonFuego:
-                fuego.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vfuego);
                 break;
             case R.id.imageButtonGas:
-                gas.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vgas);
                 break;
             case R.id.imageButtonGorra:
-                gorra.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vgorra);
                 break;
             case R.id.imageButtonHacha:
-                hacha.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhacha);
                 break;
             case R.id.imageButtonHilo:
-                hilo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhilo);
                 break;
             case R.id.imageButtonIglesia:
-                iglesia.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.viglesia);
                 break;
             case R.id.imageButtonJabon:
-                jabon.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vjabon);
                 break;
             case R.id.imageButtonLago:
-                lago.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vlago);
                 break;
             case R.id.imageButtonLibro:
-                libro.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vlibro);
                 break;
             case R.id.imageButtonLicor:
-                licor.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vlicor);
                 break;
             case R.id.imageButtonLuna:
-                luna.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vluna);
                 break;
             case R.id.imageButtonLuz:
-                luz.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vluz);
                 break;
             case R.id.imageButtonLluvia:
-                lluvia.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vlluvia);
                 break;
             case R.id.imageButtonMachete:
-                machete.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmachete);
                 break;
             case R.id.imageButtonMadera:
-                madera.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmadera);
                 break;
             case R.id.imageButtonMedicina:
-                medicina.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmedicina);
                 break;
             case R.id.imageButtonMetal:
-                metal.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmetal);
                 break;
             case R.id.imageButtonMiel:
-                miel.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmiel);
                 break;
             case R.id.imageButtonMoneda:
-                moneda.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmoneda);
                 break;
             case R.id.imageButtonOlla:
-                olla.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.volla);
                 break;
             case R.id.imageButtonPantalon:
-                pantalon.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpantalon);
                 break;
             case R.id.imageButtonPapel:
-                papel.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpapel);
                 break;
             case R.id.imageButtonPeine:
-                peine.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpeine);
                 break;
             case R.id.imageButtonPiedra:
-                piedra.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpiedra);
                 break;
             case R.id.imageButtonPlato:
-                plato.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vplato);
                 break;
             case R.id.imageButtonPuerta:
-                puerta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpuerta);
                 break;
             case R.id.imageButtonSilla:
-                silla.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsilla);
                 break;
             case R.id.imageButtonSombrero:
-                sombrero.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsombrero);
                 break;
             case R.id.imageButtonTabla:
-                tabla.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtabla);
                 break;
             case R.id.imageButtonTierra:
-                tierra.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtierra);
                 break;
+        }
+        // Reproduce el sonido si se ha cargado correctamente
+        if (mediaPlayer != null) {
+            // Libera los recursos del MediaPlayer
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+            mediaPlayer.start();
         }
     }
 }

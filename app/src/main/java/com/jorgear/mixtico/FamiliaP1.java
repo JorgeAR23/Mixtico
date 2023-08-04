@@ -23,7 +23,7 @@ public class FamiliaP1 extends AppCompatActivity {
     ImageView correctoimg, incorrectoimg;
     TextView correctotxt, incorrectotxt;
     Button button1;
-    MediaPlayer sonidoC, sonidoI, vozPregunta;
+    MediaPlayer mediaPlayer = null;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -44,9 +44,6 @@ public class FamiliaP1 extends AppCompatActivity {
         button1 = findViewById(R.id.button);
         EditText editText = findViewById(R.id.editTextMultiLine);
         editText.setKeyListener(null);
-        sonidoC = MediaPlayer.create(this, R.raw.sonido_correcto);
-        sonidoI = MediaPlayer.create(this, R.raw.sonido_incorrecto);
-        vozPregunta = MediaPlayer.create(this, R.raw.sonido_incorrecto);
         sharedPreferences = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
@@ -61,7 +58,7 @@ public class FamiliaP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            sonidoC.start();
+            mediaPlayer = MediaPlayer.create(this, R.raw.sonido_correcto);
             button1.setBackgroundColor(getResources().getColor(R.color.green));
             button1.setEnabled(false);
 
@@ -79,7 +76,7 @@ public class FamiliaP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            sonidoI.start();
+            mediaPlayer = MediaPlayer.create(this, R.raw.sonido_incorrecto);
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             //Manda el dato al MainActivity
@@ -95,7 +92,7 @@ public class FamiliaP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            sonidoI.start();
+            mediaPlayer = MediaPlayer.create(this, R.raw.sonido_incorrecto);
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             //Manda el dato al MainActivity
@@ -111,7 +108,7 @@ public class FamiliaP1 extends AppCompatActivity {
             for (int i = 0; i < radiog.getChildCount(); i++) {
                 radiog.getChildAt(i).setEnabled(false);
             }
-            sonidoI.start();
+            mediaPlayer = MediaPlayer.create(this, R.raw.sonido_incorrecto);
             button1.setBackgroundColor(getResources().getColor(R.color.red));
             button1.setEnabled(false);
             //Manda el dato al MainActivity
@@ -119,6 +116,12 @@ public class FamiliaP1 extends AppCompatActivity {
             editor.apply();
             // Llama al método para ir a la siguiente actividad después del retraso
             new Handler().postDelayed(this::P2, 2000);
+        }
+        // Reproduce el sonido si se ha cargado correctamente
+        if (mediaPlayer != null) {
+            // Libera los recursos del MediaPlayer
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+            mediaPlayer.start();
         }
     }
 
@@ -161,22 +164,6 @@ public class FamiliaP1 extends AppCompatActivity {
         mostrarDialogoDeConfirmacion();
     }
 
-    public void reproducirVoz(View view) {vozPregunta.start();}
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (sonidoC != null) {
-            sonidoC.release();
-            sonidoC = null;
-        } else if (sonidoI != null) {
-            sonidoI.release();
-            sonidoI = null;
-        } else if (vozPregunta != null) {
-            vozPregunta.release();
-            vozPregunta = null;
-        }
-    }
     //Metodo para elegir que hace el boton de Regresar, si esta vacio lo desactiva
     @Override
     public void onBackPressed() {

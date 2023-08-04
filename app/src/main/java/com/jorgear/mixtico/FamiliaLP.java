@@ -10,43 +10,11 @@ import android.view.View;
 
 public class FamiliaLP extends AppCompatActivity {
 
-    MediaPlayer abuela, abuelo, bebe, bisabuelo, compadre, cunada, cunado, esposa, esposo, hermanah,
-                hermanam, hermanoh, hermanom, hijo, mama, nieto, padrastro, padrino, papa, pariente,
-                primah, primam, primoh, primom, sobrina, sobrino, tia, tio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_familia_lp);
-
-        abuela = MediaPlayer.create(this, R.raw.vabuela);
-        abuelo = MediaPlayer.create(this, R.raw.vabuelo);
-        bebe = MediaPlayer.create(this, R.raw.vbebe);
-        bisabuelo = MediaPlayer.create(this, R.raw.vbisabuelo);
-        compadre = MediaPlayer.create(this, R.raw.vcompadre);
-        cunada = MediaPlayer.create(this, R.raw.vcunada);
-        cunado = MediaPlayer.create(this, R.raw.vcunado);
-        esposa = MediaPlayer.create(this, R.raw.vesposa);
-        esposo = MediaPlayer.create(this, R.raw.vesposo);
-        hermanah = MediaPlayer.create(this, R.raw.vhermanah);
-        hermanam = MediaPlayer.create(this, R.raw.vhermanam);
-        hermanoh = MediaPlayer.create(this, R.raw.vhermanoh);
-        hermanom = MediaPlayer.create(this, R.raw.vhermanom);
-        hijo = MediaPlayer.create(this, R.raw.vhijo);
-        mama = MediaPlayer.create(this, R.raw.vmama);
-        nieto = MediaPlayer.create(this, R.raw.vnieto);
-        padrastro = MediaPlayer.create(this, R.raw.vpadrastro);
-        padrino = MediaPlayer.create(this, R.raw.vpadrino);
-        papa = MediaPlayer.create(this, R.raw.vpapa);
-        pariente = MediaPlayer.create(this, R.raw.vpariente);
-        primah = MediaPlayer.create(this, R.raw.vprimah);
-        primam = MediaPlayer.create(this, R.raw.vprimam);
-        primoh = MediaPlayer.create(this, R.raw.vprimoh);
-        primom = MediaPlayer.create(this, R.raw.vprimom);
-        sobrina = MediaPlayer.create(this, R.raw.vsobrina);
-        sobrino = MediaPlayer.create(this, R.raw.vsobrino);
-        tia = MediaPlayer.create(this, R.raw.vtia);
-        tio = MediaPlayer.create(this, R.raw.vtio);
 
     }
 
@@ -64,92 +32,100 @@ public class FamiliaLP extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void reproducirSonido(View view) {
+        // Carga el recurso de sonido justo antes de reproducirlo
+        MediaPlayer mediaPlayer = null;
         // Determina qué botón se ha presionado y reproduce el sonido correspondiente
         switch (view.getId()) {
             case R.id.imageButtonAbuela:
-                abuela.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vabuela);
                 break;
             case R.id.imageButtonAbuelo:
-                abuelo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vabuelo);
                 break;
             case R.id.imageButtonBebe:
-                bebe.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vbebe);
                 break;
             case R.id.imageButtonBisabuelo:
-                bisabuelo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vbisabuelo);
                 break;
             case R.id.imageButtonCompadre:
-                compadre.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcompadre);
                 break;
             case R.id.imageButtonCuñada:
-                cunada.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcunada);
                 break;
             case R.id.imageButtonCuñado:
-                cunado.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcunado);
                 break;
             case R.id.imageButtonEsposa:
-                esposa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vesposa);
                 break;
             case R.id.imageButtonEsposo:
-                esposo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vesposo);
                 break;
             case R.id.imageButtonHermanaH:
-                hermanah.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhermanah);
                 break;
             case R.id.imageButtonHermanaM:
-                hermanam.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhermanam);
                 break;
             case R.id.imageButtonHermanoH:
-                hermanoh.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhermanoh);
                 break;
             case R.id.imageButtonHermanoM:
-                hermanom.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhermanom);
                 break;
             case R.id.imageButtonHijo:
-                hijo.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vhijo);
                 break;
             case R.id.imageButtonMama:
-                mama.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmama);
                 break;
             case R.id.imageButtonNieto:
-                nieto.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vnieto);
                 break;
             case R.id.imageButtonPadrastro:
-                padrastro.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpadrastro);
                 break;
             case R.id.imageButtonPadrino:
-                padrino.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpadrino);
                 break;
             case R.id.imageButtonPapa:
-                papa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpapa);
                 break;
             case R.id.imageButtonPariente:
-                pariente.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vpariente);
                 break;
             case R.id.imageButtonPrimaH:
-                primah.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vprimah);
                 break;
             case R.id.imageButtonPrimaM:
-                primah.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vprimam);
                 break;
             case R.id.imageButtonPrimoH:
-                primoh.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vprimoh);
                 break;
             case R.id.imageButtonPrimoM:
-                primom.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vprimom);
                 break;
             case R.id.imageButtonSobrina:
-                sobrina.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsobrina);
                 break;
             case R.id.imageButtonSobrino:
-                sobrino.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsobrino);
                 break;
             case R.id.imageButtonTia:
-                tia.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtia);
                 break;
             case R.id.imageButtonTio:
-                tio.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtio);
                 break;
+        }
+        // Reproduce el sonido si se ha cargado correctamente
+        if (mediaPlayer != null) {
+            // Libera los recursos del MediaPlayer
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+            mediaPlayer.start();
         }
     }
 }

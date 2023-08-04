@@ -178,6 +178,26 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        tvVerbos = findViewById(R.id.textViewVerbos);
+        int aciertoVerbo1 = sharedPreferencesAciertos.getInt("aciertoVerbo1", 0);
+        int aciertoVerbo2 = sharedPreferencesAciertos.getInt("aciertoVerbo2", 0);
+        int aciertoVerbo3 = sharedPreferencesAciertos.getInt("aciertoVerbo3", 0);
+        int aciertoVerbo4 = sharedPreferencesAciertos.getInt("aciertoVerbo4", 0);
+        int aciertoVerbo5 = sharedPreferencesAciertos.getInt("aciertoVerbo5", 0);
+        int aciertosVerbo = aciertoVerbo1 + aciertoVerbo2 + aciertoVerbo3 + aciertoVerbo4 + aciertoVerbo5;
+        int aciertosFinVerbo = sharedPreferencesAciertos.getInt("aciertosFinVerbo", 0);
+        if (aciertosVerbo > aciertosFinVerbo){
+            editor.putInt("aciertosFinVerbo", aciertosVerbo);
+            editor.apply();
+            String aciertosVerboString = String.valueOf(aciertosVerbo);
+            tvVerbos.setText(aciertosVerboString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinVerboString = String.valueOf(aciertosFinVerbo);
+            tvVerbos.setText(aciertosFinVerboString + "/5 Aciertos");
+        }
+
+
 
         // Obtione la referencia al BottomNavigationView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -275,6 +295,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(sustantivos);
     }
 
+    //Metodo para ir a VerbosLP
+    public void Verbos(View view){
+        Intent verbos = new Intent(this, VerbosLP.class);
+        startActivity(verbos);
+    }
 
 
     //Metodo para la accion al presionar el boton del sistema "Regresar"

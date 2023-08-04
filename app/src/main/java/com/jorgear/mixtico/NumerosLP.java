@@ -10,45 +10,10 @@ import android.view.View;
 
 public class NumerosLP extends AppCompatActivity {
 
-    MediaPlayer uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce, trece,
-                catorce, quince, dieciseis, diecisiete, dieciocho, diecinueve, veinte, treinta,
-                cuarenta, cincuenta, sesenta, setenta, ochenta, noventa, cien, doscientos, mil;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numeros_lp);
-
-        uno = MediaPlayer.create(this, R.raw.vuno);
-        dos = MediaPlayer.create(this, R.raw.vdos);
-        tres = MediaPlayer.create(this, R.raw.vtres);
-        cuatro = MediaPlayer.create(this, R.raw.vcuatro);
-        cinco = MediaPlayer.create(this, R.raw.vcinco);
-        seis = MediaPlayer.create(this, R.raw.vseis);
-        siete = MediaPlayer.create(this, R.raw.vsiete);
-        ocho = MediaPlayer.create(this, R.raw.vocho);
-        nueve = MediaPlayer.create(this, R.raw.vnueve);
-        diez = MediaPlayer.create(this, R.raw.vdiez);
-        once = MediaPlayer.create(this, R.raw.vonce);
-        doce = MediaPlayer.create(this, R.raw.vdoce);
-        trece = MediaPlayer.create(this, R.raw.vtrece);
-        catorce = MediaPlayer.create(this, R.raw.vcatorce);
-        quince = MediaPlayer.create(this, R.raw.vquince);
-        dieciseis= MediaPlayer.create(this, R.raw.vdieciseis);
-        diecisiete = MediaPlayer.create(this, R.raw.vdiecisiete);
-        dieciocho = MediaPlayer.create(this, R.raw.vdieciocho);
-        diecinueve = MediaPlayer.create(this, R.raw.vdiecinueve);
-        veinte = MediaPlayer.create(this, R.raw.vveinte);
-        treinta = MediaPlayer.create(this, R.raw.vtreinta);
-        cuarenta = MediaPlayer.create(this, R.raw.vcuarenta);
-        cincuenta = MediaPlayer.create(this, R.raw.vcincuenta);
-        sesenta = MediaPlayer.create(this, R.raw.vsesenta);
-        setenta = MediaPlayer.create(this, R.raw.vsetenta);
-        ochenta = MediaPlayer.create(this, R.raw.vochenta);
-        noventa = MediaPlayer.create(this, R.raw.vnoventa);
-        cien = MediaPlayer.create(this, R.raw.vcien);
-        doscientos = MediaPlayer.create(this, R.raw.vdoscientos);
-        mil = MediaPlayer.create(this, R.raw.vmil);
 
     }
     //Metodo para regresar a Inicio
@@ -65,98 +30,106 @@ public class NumerosLP extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void reproducirSonido(View view) {
+        // Carga el recurso de sonido justo antes de reproducirlo
+        MediaPlayer mediaPlayer = null;
         // Determina qué botón se ha presionado y reproduce el sonido correspondiente
         switch (view.getId()) {
             case R.id.imageButton1:
-                uno.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vuno);
                 break;
             case R.id.imageButton2:
-                dos.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdos);
                 break;
             case R.id.imageButton3:
-                tres.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtres);
                 break;
             case R.id.imageButton4:
-                cuatro.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcuatro);
                 break;
             case R.id.imageButton5:
-                cinco.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcinco);
                 break;
             case R.id.imageButton6:
-                seis.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vseis);
                 break;
             case R.id.imageButton7:
-                siete.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsiete);
                 break;
             case R.id.imageButton8:
-                ocho.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vocho);
                 break;
             case R.id.imageButton9:
-                nueve.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vnueve);
                 break;
             case R.id.imageButton10:
-                diez.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdiez);
                 break;
             case R.id.imageButton11:
-                once.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vonce);
                 break;
             case R.id.imageButton12:
-                doce.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdoce);
                 break;
             case R.id.imageButton13:
-                trece.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtrece);
                 break;
             case R.id.imageButton14:
-                catorce.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcatorce);
                 break;
             case R.id.imageButton15:
-                quince.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vquince);
                 break;
             case R.id.imageButton16:
-                dieciseis.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdieciseis);
                 break;
             case R.id.imageButton17:
-                diecisiete.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdiecisiete);
                 break;
             case R.id.imageButton18:
-                dieciocho.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdieciocho);
                 break;
             case R.id.imageButton19:
-                diecinueve.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdiecinueve);
                 break;
             case R.id.imageButton20:
-                veinte.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vveinte);
                 break;
             case R.id.imageButton30:
-                treinta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vtreinta);
                 break;
             case R.id.imageButton40:
-                cuarenta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcuarenta);
                 break;
             case R.id.imageButton50:
-                cincuenta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcincuenta);
                 break;
             case R.id.imageButton60:
-                sesenta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsesenta);
                 break;
             case R.id.imageButton70:
-                setenta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vsetenta);
                 break;
             case R.id.imageButton80:
-                ochenta.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vochenta);
                 break;
             case R.id.imageButton90:
-                noventa.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vnoventa);
                 break;
             case R.id.imageButton100:
-                cien.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vcien);
                 break;
             case R.id.imageButton200:
-                doscientos.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vdoscientos);
                 break;
             case R.id.imageButton1000:
-                mil.start();
+                mediaPlayer = MediaPlayer.create(this, R.raw.vmil);
                 break;
+        }
+        // Reproduce el sonido si se ha cargado correctamente
+        if (mediaPlayer != null) {
+            // Libera los recursos del MediaPlayer
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+            mediaPlayer.start();
         }
     }
 }
