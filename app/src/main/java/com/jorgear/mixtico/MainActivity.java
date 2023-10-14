@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton btnModoClaro, btnModoOscuro;
     public BottomNavigationView bottomNavigationView;
-    TextView tvAdverbios, tvAnimales, tvAnimo, tvCalendario, tvColores, tvCuerpo, tvFamilia,
-             tvNumeros, tvSustantivos, tvPronombres, tvSaludos, tvVerbos;
+    TextView tvAdverbios, tvAlimentos, tvAnimales, tvAnimo, tvCalendario, tvColores, tvCuerpo, tvFamilia,
+             tvNumeros, tvSustantivos, tvPronombres, tvVerbos;
 
 
 
@@ -43,6 +43,44 @@ public class MainActivity extends AppCompatActivity {
         }
 
         SharedPreferences sharedPreferencesAciertos = getSharedPreferences("MiArchivoPreferences", Context.MODE_PRIVATE);
+        tvAdverbios = findViewById(R.id.textViewAdverbios);
+        int aciertoAdverbio1 = sharedPreferencesAciertos.getInt("aciertoAdverbio1", 0);
+        int aciertoAdverbio2 = sharedPreferencesAciertos.getInt("aciertoAdverbio2", 0);
+        int aciertoAdverbio3 = sharedPreferencesAciertos.getInt("aciertoAdverbio3", 0);
+        int aciertoAdverbio4 = sharedPreferencesAciertos.getInt("aciertoAdverbio4", 0);
+        int aciertoAdverbio5 = sharedPreferencesAciertos.getInt("aciertoAdverbio5", 0);
+        int aciertosAdverbio = aciertoAdverbio1 + aciertoAdverbio2 + aciertoAdverbio3 + aciertoAdverbio4 + aciertoAdverbio5;
+        int aciertosFinAdverbio = sharedPreferencesAciertos.getInt("aciertosFinAdverbio", 0);
+        if (aciertosAdverbio > aciertosFinAdverbio){
+            editor.putInt("aciertosFinAdverbio", aciertosAdverbio);
+            editor.apply();
+            String aciertosAdverbioString = String.valueOf(aciertosAdverbio);
+            tvAdverbios.setText(aciertosAdverbioString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinAdverbioString = String.valueOf(aciertosFinAdverbio);
+            tvAdverbios.setText(aciertosFinAdverbioString + "/5 Aciertos");
+        }
+
+        tvAlimentos = findViewById(R.id.textViewAlimentos);
+        int aciertoAlimento1 = sharedPreferencesAciertos.getInt("aciertoAlimento1", 0);
+        int aciertoAlimento2 = sharedPreferencesAciertos.getInt("aciertoAlimento2", 0);
+        int aciertoAlimento3 = sharedPreferencesAciertos.getInt("aciertoAlimento3", 0);
+        int aciertoAlimento4 = sharedPreferencesAciertos.getInt("aciertoAlimento4", 0);
+        int aciertoAlimento5 = sharedPreferencesAciertos.getInt("aciertoAlimento5", 0);
+        int aciertosAlimento = aciertoAlimento1 + aciertoAlimento2 + aciertoAlimento3 + aciertoAlimento4 + aciertoAlimento5;
+        int aciertosFinAlimento = sharedPreferencesAciertos.getInt("aciertosFinAlimento", 0);
+        if (aciertosAlimento > aciertosFinAlimento){
+            editor.putInt("aciertosFinAlimento", aciertosAlimento);
+            editor.apply();
+            String aciertosAlimentoString = String.valueOf(aciertosAlimento);
+            tvAlimentos.setText(aciertosAlimentoString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinAlimentoString = String.valueOf(aciertosFinAlimento);
+            tvAlimentos.setText(aciertosFinAlimentoString + "/5 Aciertos");
+        }
+
         tvAnimales = findViewById(R.id.textViewAnimales);
         int aciertoAnimal1 = sharedPreferencesAciertos.getInt("aciertoAnimal1", 0);
         int aciertoAnimal2 = sharedPreferencesAciertos.getInt("aciertoAnimal2", 0);
@@ -252,6 +290,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Metodo para ir a AdverbiosLP
+    public void Adverbios(View view){
+        Intent adverbios = new Intent(this, AdverbiosLP.class);
+        startActivity(adverbios);
+    }
+
+    //Metodo para ir a AdverbiosLP
+    public void Alimentos(View view){
+        Intent alimentos = new Intent(this, AlimentosLP.class);
+        startActivity(alimentos);
+    }
 
     //Metodo para ir a AnimalesLP
     public void Animales(View view){

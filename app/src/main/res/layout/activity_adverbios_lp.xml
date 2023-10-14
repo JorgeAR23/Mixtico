@@ -17,12 +17,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="137dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="137dp"
             android:fontFamily="sans-serif-black"
             android:text="ADVERBIOS"
             android:textAlignment="center"
-            android:textSize="40sp"
+            android:textSize="44sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -49,7 +49,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="5dp"
             android:background="#00000000"
-            android:contentDescription="@string/descripciones"
+            android:contentDescription="Boton Prueba"
             android:onClick="Prueba"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -62,27 +62,27 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="24dp"
             android:background="#00000000"
-            android:contentDescription="@string/descripciones"
+            android:contentDescription="Boton Regresar"
             android:onClick="Inicio"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrowback" />
 
         <ImageButton
-            android:id="@+id/imageButtonA"
+            android:id="@+id/imageButtonAbajo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
-            android:onClick="Gato"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-            app:srcCompat="@drawable/gato" />
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/abajo" />
 
         <ImageButton
-            android:id="@+id/imageButtonE"
+            android:id="@+id/imageButtonAdentro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -91,10 +91,11 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-            app:srcCompat="@drawable/azul" />
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/adentro" />
 
         <ImageButton
-            android:id="@+id/imageButtonI"
+            android:id="@+id/imageButtonAfuera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -104,11 +105,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonA"
-            app:srcCompat="@drawable/verde" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAbajo"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/afuera" />
 
         <ImageButton
-            android:id="@+id/imageButtonJ"
+            android:id="@+id/imageButtonAhora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -116,11 +118,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonE"
-            app:srcCompat="@drawable/amarillo" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAdentro"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/ahora" />
 
         <ImageButton
-            android:id="@+id/imageButtonK"
+            android:id="@+id/imageButtonAnoche"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -130,11 +133,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonI"
-            app:srcCompat="@drawable/cafe" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAfuera"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/anoche" />
 
         <ImageButton
-            android:id="@+id/imageButtonL"
+            android:id="@+id/imageButtonAntes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -142,11 +146,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonJ"
-            app:srcCompat="@drawable/anaranjado" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAhora"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/antes" />
 
         <ImageButton
-            android:id="@+id/imageButtonM"
+            android:id="@+id/imageButtonAntier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -156,11 +161,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonK"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAnoche"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/antier" />
 
         <ImageButton
-            android:id="@+id/imageButtonN"
+            android:id="@+id/imageButtonAqui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -168,11 +174,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonL"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAntes"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/aqui" />
 
         <ImageButton
-            android:id="@+id/imageButtonÑ"
+            android:id="@+id/imageButtonArriba"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -182,11 +189,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonM"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAntier"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/arriba" />
 
         <ImageButton
-            android:id="@+id/imageButtonO"
+            android:id="@+id/imageButtonAyer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -194,11 +202,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonN"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAqui"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/ayer" />
 
         <ImageButton
-            android:id="@+id/imageButtonP"
+            android:id="@+id/imageButtonBien"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -208,11 +217,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonÑ"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonArriba"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/bien" />
 
         <ImageButton
-            android:id="@+id/imageButtonR"
+            android:id="@+id/imageButtonCasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -220,11 +230,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonO"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAyer"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/casi" />
 
         <ImageButton
-            android:id="@+id/imageButtonS"
+            android:id="@+id/imageButtonCerca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -234,11 +245,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonP"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBien"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cerca" />
 
         <ImageButton
-            android:id="@+id/imageButtonT"
+            android:id="@+id/imageButtonCual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -246,11 +258,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonR"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCasi"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cual" />
 
         <ImageButton
-            android:id="@+id/imageButtonU"
+            android:id="@+id/imageButtonCuando"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -260,11 +273,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonS"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCerca"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cuando" />
 
         <ImageButton
-            android:id="@+id/imageButtonV"
+            android:id="@+id/imageButtonCuanto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -272,11 +286,12 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonT"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCual"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/cuanto" />
 
         <ImageButton
-            android:id="@+id/imageButtonX"
+            android:id="@+id/imageButtonDespues"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -286,11 +301,12 @@
             android:contentDescription="@string/descripciones"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonU"
-            app:srcCompat="@drawable/negro" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCuando"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/despues" />
 
         <ImageButton
-            android:id="@+id/imageButtonY"
+            android:id="@+id/imageButtonDonde"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -298,9 +314,205 @@
             android:background="@drawable/rounded_button"
             android:contentDescription="@string/descripciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonV"
-            app:srcCompat="@drawable/blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonCuanto"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/donde" />
 
+        <ImageButton
+            android:id="@+id/imageButtonEncima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDespues"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/encima" />
+
+        <ImageButton
+            android:id="@+id/imageButtonHoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDonde"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/hoy" />
+
+        <ImageButton
+            android:id="@+id/imageButtonManana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEncima"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/manana" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonHoy"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/mas" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMejor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonManana"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/mejor" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMenos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMas"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/menos" />
+
+        <ImageButton
+            android:id="@+id/imageButtonNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMejor"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/no" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPronto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMenos"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/pronto" />
+
+        <ImageButton
+            android:id="@+id/imageButtonQuien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonNo"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/quien" />
+
+        <ImageButton
+            android:id="@+id/imageButtonQuizas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPronto"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/quizas" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonQuien"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/si" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSiempre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonQuizas"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/siempre" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTarde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonSi"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/tarde" />
+
+        <ImageButton
+            android:id="@+id/imageButtonTemprano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/descripciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonSiempre"
+            android:onClick="reproducirSonido"
+            app:srcCompat="@drawable/temprano" />
 
         <TextView
             android:id="@+id/textViewAviso"
@@ -315,7 +527,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonY" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonTemprano" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

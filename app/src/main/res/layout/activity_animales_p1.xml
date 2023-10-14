@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿En cual de las siguientes opciones esta escrita correctamente la palabra Gato en Mixteco?"
+        android:text="¿En cual de las siguientes opciones esta escrita la palabra Gato en Mixteco?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

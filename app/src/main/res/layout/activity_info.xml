@@ -67,7 +67,7 @@
                 android:text="El mixteco, conocido tambien como tu'un savi, lengua de la lluvia, es un conjunto de variedades lingüisticas habladas principalmente en los estados de Guerrero, Oaxaca y Puebla. En el Censo de Población y Vivienda del INEGI 2010 se registraron 496,038 hablantes de alguna variedad de mixteco. De todas las agrupaciones lingüísticas es la que conjunta el mayor número de variantes, 81 en total.
                 \n\nEsta app fue desarrollada teniendo como referencia principal la variedad hablada en el municipio de Metlatonoc, por lo que las palabras mostradas pueden ser diferentes a como se escriben y pronuncian en otras regiones.
                 \n\nLa razon de existir de esta aplicacion, es la necesidad que existe en nuestro pais de preserver y promover la lengua mixteca, ya que esta es una parte importante del patrimonio cultural de Mexico y sin embargo corre el riesto de desaparecer debido a varios factores.
-                \n\nEste ha sido el motivo que nos impulso a crearla, con el objetivo de que al conocer mas sobre esta, despierte un interes en esta hermosa lengua y practiquen dia a dia para que, en un futuro, puedan inclusive entablar conversaciones con hablantes nativos de la misma. "
+                \n\nEste ha sido el motivo que nos impulso a crearla, con el objetivo de que al conocer mas sobre esta, despierte un interes en esta hermosa lengua y practiquen dia a dia para que, en un futuro, puedan incluso entablar conversaciones con hablantes nativos de la misma. "
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

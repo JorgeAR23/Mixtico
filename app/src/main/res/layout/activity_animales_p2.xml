@@ -61,7 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:inputType="textMultiLine"
-        android:text="¿En cual de las siguientes opciones en Mixteco se encuentra el animal mas lento del planeta?"
+        android:text="¿En cual de las siguientes opciones se encuentra el animal mas lento del planeta?"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

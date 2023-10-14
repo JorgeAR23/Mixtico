@@ -12,23 +12,62 @@
         android:theme="@style/Theme.Mixtico"
         tools:targetApi="31">
         <activity
-            android:name=".VerbosP5"
+            android:name=".AdverbiosP5"
             android:exported="false" />
+        <activity
+            android:name=".AdverbiosP4"
+            android:exported="false" />
+        <activity
+            android:name=".AdverbiosP3"
+            android:exported="false" />
+        <activity
+            android:name=".AdverbiosP2"
+            android:exported="false" />
+        <activity
+            android:name=".AdverbiosP1"
+            android:exported="false" />
+        <activity
+            android:name=".AlimentosP5"
+            android:exported="false" />
+        <activity
+            android:name=".AlimentosP4"
+            android:exported="false" />
+        <activity
+            android:name=".AlimentosP3"
+            android:exported="false" />
+        <activity
+            android:name=".AlimentosP2"
+            android:exported="false" />
+        <activity
+            android:name=".AlimentosP1"
+            android:exported="false" />
+        <activity
+            android:name=".AlimentosLP"
+            android:exported="false" />
+        <activity
+            android:name=".VerbosP5"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".VerbosP4"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".VerbosP3"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".VerbosP2"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".VerbosP1"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".VerbosLP"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".NumerosP5"
             android:exported="false"
