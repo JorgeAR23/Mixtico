@@ -12,6 +12,39 @@
         android:theme="@style/Theme.Mixtico"
         tools:targetApi="31">
         <activity
+            android:name=".CalendarioP5"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarioP4"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarioP3"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarioP2"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarioP1"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarioLP"
+            android:exported="false" />
+        <activity
+            android:name=".PronombresP5"
+            android:exported="false" />
+        <activity
+            android:name=".PronombresP4"
+            android:exported="false" />
+        <activity
+            android:name=".PronombresP3"
+            android:exported="false" />
+        <activity
+            android:name=".PronombresP2"
+            android:exported="false" />
+        <activity
+            android:name=".PronombresP1"
+            android:exported="false" />
+        <activity
             android:name=".AdverbiosP5"
             android:exported="false" />
         <activity

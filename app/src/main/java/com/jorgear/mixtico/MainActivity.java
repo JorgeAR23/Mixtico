@@ -119,6 +119,25 @@ public class MainActivity extends AppCompatActivity {
             tvAnimo.setText(aciertosFinAnimoString + "/5 Aciertos");
         }
 
+        tvCalendario = findViewById(R.id.textViewCalendario);
+        int aciertoCalendario1 = sharedPreferencesAciertos.getInt("aciertoCalendario1", 0);
+        int aciertoCalendario2 = sharedPreferencesAciertos.getInt("aciertoCalendario2", 0);
+        int aciertoCalendario3 = sharedPreferencesAciertos.getInt("aciertoCalendario3", 0);
+        int aciertoCalendario4 = sharedPreferencesAciertos.getInt("aciertoCalendario4", 0);
+        int aciertoCalendario5 = sharedPreferencesAciertos.getInt("aciertoCalendario5", 0);
+        int aciertosCalendario = aciertoCalendario1 + aciertoCalendario2 + aciertoCalendario3 + aciertoCalendario4 + aciertoCalendario5;
+        int aciertosFinCalendario = sharedPreferencesAciertos.getInt("aciertosFinCalendario", 0);
+        if (aciertosCalendario > aciertosFinCalendario){
+            editor.putInt("aciertosFinCalendario", aciertosCalendario);
+            editor.apply();
+            String aciertosCalendarioString = String.valueOf(aciertosCalendario);
+            tvCalendario.setText(aciertosCalendarioString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinCalendarioString = String.valueOf(aciertosFinCalendario);
+            tvCalendario.setText(aciertosFinCalendarioString + "/5 Aciertos");
+        }
+
         tvColores = findViewById(R.id.textViewColores);
         int aciertoColor1 = sharedPreferencesAciertos.getInt("aciertoColor1", 0);
         int aciertoColor2 = sharedPreferencesAciertos.getInt("aciertoColor2", 0);
@@ -195,6 +214,24 @@ public class MainActivity extends AppCompatActivity {
             tvNumeros.setText(aciertosFinNumeroString + "/5 Aciertos");
         }
 
+        tvPronombres = findViewById(R.id.textViewPronombres);
+        int aciertoPronombre1 = sharedPreferencesAciertos.getInt("aciertoPronombre1", 0);
+        int aciertoPronombre2 = sharedPreferencesAciertos.getInt("aciertoPronombre2", 0);
+        int aciertoPronombre3 = sharedPreferencesAciertos.getInt("aciertoPronombre3", 0);
+        int aciertoPronombre4 = sharedPreferencesAciertos.getInt("aciertoPronombre4", 0);
+        int aciertoPronombre5 = sharedPreferencesAciertos.getInt("aciertoPronombre5", 0);
+        int aciertosPronombre = aciertoPronombre1 + aciertoPronombre2 + aciertoPronombre3+ aciertoPronombre4 + aciertoPronombre5;
+        int aciertosFinPronombre = sharedPreferencesAciertos.getInt("aciertosFinPronombre", 0);
+        if (aciertosPronombre > aciertosFinPronombre){
+            editor.putInt("aciertosFinPronombre", aciertosPronombre);
+            editor.apply();
+            String aciertosPronombreString = String.valueOf(aciertosPronombre);
+            tvPronombres.setText(aciertosPronombreString + "/5 Aciertos");
+        } else {
+            // Mostrar el número de aciertos anterior
+            String aciertosFinPronombreString = String.valueOf(aciertosFinPronombre);
+            tvPronombres.setText(aciertosFinPronombreString + "/5 Aciertos");
+        }
 
         tvSustantivos = findViewById(R.id.textViewSustantivos);
         int aciertoSustantivo1 = sharedPreferencesAciertos.getInt("aciertoSustantivo1", 0);
@@ -264,29 +301,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    private void establecerTemaClaro() {
+    public void Claro(View view){
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         editor.putInt("modoCO", 1);
         editor.apply();
         btnModoClaro.setEnabled(false);
         btnModoOscuro.setEnabled(true);
     }
-
-    private void establecerTemaOscuro() {
+    public void Oscuro(View view){
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         editor.putInt("modoCO", 2);
         editor.apply();
         btnModoClaro.setEnabled(true);
         btnModoOscuro.setEnabled(false);
-
-    }
-
-    public void Claro(View view){
-        establecerTemaClaro();
-    }
-    public void Oscuro(View view){
-        establecerTemaOscuro();
     }
 
 
@@ -314,6 +341,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(animo);
     }
 
+    //Metodo para ir a CalendarioLP
+    public void Calendario(View view){
+        Intent calendario = new Intent(this, CalendarioLP.class);
+        startActivity(calendario);
+    }
+
     //Metodo para ir a ColoresLP
     public void Colores(View view){
         Intent colores = new Intent(this, ColoresLP.class);
@@ -336,6 +369,12 @@ public class MainActivity extends AppCompatActivity {
     public void Numeros(View view){
         Intent numeros = new Intent(this, NumerosLP.class);
         startActivity(numeros);
+    }
+
+    //Metodo para ir a PronombresLP
+    public void Pronombres(View view){
+        Intent pronombres = new Intent(this, PronombresLP.class);
+        startActivity(pronombres);
     }
 
     //Metodo para ir a SustantivosLP
